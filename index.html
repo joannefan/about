@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Joanne's Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
+    <script src="animation.js"></script>
+  </head>
+  <body>
+
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <button type="button">Sign Up</button>
+        </div>
+        <div class="content">
+            <h2>Welcome to my</h2>
+            <h1>Creative Corner</h1>
+            <button type="button">Take a tour</button>
+        </div>
+        <div class="side-bar">
+            <img src="images/menu.png" class="menu">
+            <div class="social-links">
+                <img src="images/linkedin.png">
+                <img src="images/github.png">
+            </div>
+        </div>
+        <div class="dandelions"></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            animateSeeds();
+        });
+    </script>
+
+    <!-- <div class="container"></div> -->
+    <!-- <script>
+        // const data = [8, 18, 7, 10, 19, 20, 10, 10, 6, 19, 17, 18, 23, 23, 13, 12, 15, 6, 9, 8];
+        // drawChart('.container', data);
+      
+    </script> -->
+  </body>
+</html>
