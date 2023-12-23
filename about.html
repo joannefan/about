@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="page.css">
+    <title>About Me</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="static.js"></script>
+</head>
+<body>
+    <div class="nav-container"></div>
+    <div class="side-bar"></div>
+    <h1>A Little About Me</h1>
+    <p>
+        Hello, my name is Joanne! I'm a junior double majoring in Computer Science and Cognitive & Brain Sciences at Tufts University.
+    </p>
+    <p>
+        On the Computer Science side, I am interested in gaining more experience in modern software engineering practices as well as continuing to improve my web development skills.
+    </p>
+    <p>
+        On the Cognitive & Brain Sciences side, I enjoy philosophical discussions on topics such as language, consciousness, epistemology, religion, and more. Here's an <a href="https://nespectator.org/the-quandry-of-mind-for-materialism/">opinion piece</a> I wrote for The New England Spectator, a campus journal.
+    </p>
+    <p>
+        Outside of school, I also enjoy <a href="https://youtu.be/yJMcghmKqu4">singing</a>, playing the piano, photography, learning languages, and reading (recently I finished <em>The Master and Margarita</em> by Mikhail Bulgakov).
+    </p>
+
+    <script>
+        $(document).ready(function() {
+            $(".nav-container").html(getNavHtml());
+            $(".side-bar").html(getSidebarHtml("color"));
+        })
+    </script>
+</body>
+</html>

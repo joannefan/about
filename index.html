@@ -9,32 +9,32 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
     <script src="animation.js"></script>
-  </head>
-  <body>
-
+    <script src="static.js"></script>
+</head>
+<body>
     <div class="banner">
-        <div class="navbar">
-            <img src="images/logo.png" class="logo">
-            <button type="button">Sign Up</button>
-        </div>
-        <div class="content">
+        <div class="banner-content">
             <h2>Welcome to my</h2>
             <h1>Creative Corner</h1>
-            <button type="button">Take a tour</button>
+            <a href="projects.html" class="btn draw-border">Take a Tour</a>
         </div>
-        <div class="side-bar">
-            <img src="images/menu.png" class="menu">
-            <div class="social-links">
-                <img src="images/linkedin.png">
-                <img src="images/github.png">
-            </div>
-        </div>
+        <div class="side-bar"></div>
         <div class="dandelions"></div>
     </div>
-    <script>
+    <!-- <div class="content">
+    </div> -->
+
+    <!-- <script>
         $(document).ready(function () {
             animateSeeds();
         });
+    </script> -->
+
+    <script>
+        $(document).ready(function() {
+            $(".banner").prepend(getNavHtml());
+            $(".side-bar").html(getSidebarHtml("white"));
+        })
     </script>
 
     <!-- <div class="container"></div> -->
@@ -43,5 +43,5 @@
         // drawChart('.container', data);
       
     </script> -->
-  </body>
+</body>
 </html>

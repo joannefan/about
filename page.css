@@ -1,0 +1,24 @@
+p {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    line-height: 1.8em;
+    font-size: 19px;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+.nav-container {
+    width: 100%;
+    background-color: #702b3b;
+    position: relative;
+    padding: 20px 0px;
+}
+.draw-border:hover {
+    color: #3c8a7d;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+    border-color: #3c8a7d;
+}

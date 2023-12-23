@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 body {
-    background-color: #E2E8CE;
+    background-color: white;
 }
 
 .banner {
@@ -21,6 +23,12 @@ body {
     width: 150px;
     cursor: pointer;
 }
+.nav-links {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .navbar {
     height: 15%;
     width: 90%;
@@ -29,16 +37,77 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-button {
+
+.btn {
+    /* 
+    text-decoration: none;
     color: #fbfcfd;
     padding: 10px 25px;
     background: transparent;
     border: 1px solid #fff;
     border-radius: 20px;
     outline: none;
-    cursor: pointer;
+    cursor: pointer; */
 }
-.content {
+/* button styling inspired by a design from https://uicookies.com/css-buttons/ 
+    css at https://codepen.io/giana/pen/xdXpJB */
+.draw-border {
+    box-shadow: inset 0 0 0 3px #fbfcfd;
+    color: #fbfcfd;
+    transition: color 0.25s 0.083s;
+    position: relative;
+}
+.draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    /* pointer-events: none; */
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+.draw-border::before {
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+.draw-border::after {
+    border-top-width: 3px;
+    border-right-width: 3px;
+}
+.draw-border:hover {
+    color: #702b3b;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+    border-color: #702b3b;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+.draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    padding: 0.9em 1.3em;
+    /* letter-spacing: 0.05rem; */
+}
+.btn:focus {
+    outline: 2px dotted #fbfcfd;
+}
+
+
+.banner-content {
     color: #fbfcfd;
     position: absolute;
     top: 50%;
@@ -52,18 +121,27 @@ h1 {
 }
 .side-bar {
     width: 50px;
-    height: 100vh;
-    background: linear-gradient(#8F7E4F, #315659);
+    height: 100px;
+    /* background: linear-gradient(#8F7E4F, #315659); */
     position: absolute;
     right: 0;
-    top: 0;
+    /* top: 0; */
+    bottom: 200px;
 }
+
 .menu {
-    display: block;
+    display: none;
     width: 25px;
     margin: 40px auto 0;
     cursor: pointer;
 }
+
+@media (max-width: 1250px) {
+    .menu {
+        display: block;
+    }
+}
+
 .social-links img {
     width: 25px;
     margin: 5px auto;
@@ -113,3 +191,4 @@ h1 {
     margin-right: 50px;
     overflow: hidden;
 }
+

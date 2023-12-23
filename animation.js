@@ -1,6 +1,6 @@
 function animateSeeds() {
     const numberOfSeeds = 30;
-    const seedRadius = 25; // Half of the image width
+    const seedRadius = 20; // Half of the image width
     const container = d3.select(".dandelions");
 
     const seedData = Array.from({ length: numberOfSeeds }, (_, i) => {
@@ -35,8 +35,8 @@ function animateSeeds() {
         .append("image")
         .attr("class", "seed")
         .attr("xlink:href", "images/seed.png") 
-        .attr("width", 50)
-        .attr("height", 50)
+        .attr("width", 40)
+        .attr("height", 40)
         .attr("x", d => d.x - seedRadius) 
         .attr("y", d => d.y - seedRadius)
         .attr("transform", d => `rotate(${d.angle},${d.x},${d.y})`) // Rotate the image based on the random angle
