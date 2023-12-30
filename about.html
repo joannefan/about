@@ -30,6 +30,16 @@
         $(document).ready(function() {
             $(".nav-container").html(getNavHtml());
             $(".side-bar").html(getSidebarHtml("color"));
+            
+            $(".menu").click(function(event) {
+                $(".mobile-nav-links").toggle();
+            })
+
+            $(window).resize(function() {
+                if ($(window).width() > 768) {
+                    $(".mobile-nav-links").css("display", "none");
+                }
+            });
         })
     </script>
 </body>

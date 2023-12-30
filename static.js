@@ -3,7 +3,6 @@ function getNavHtml() {
     const html = 
     `<div class="navbar">
         <div class="logo"></div>
-        <!-- <img src="images/logo.png" class="logo"> -->
         <div class="nav-links">
             <a href="index.html" class="btn draw-border">Home</a>
             <a href="about.html" class="btn draw-border">About</a>
@@ -12,10 +11,10 @@ function getNavHtml() {
         </div>
         <img src="images/menu.png" class="menu">
         <div class="mobile-nav-links">
-            <a href="index.html" class="btn draw-border">Home</a>
-            <a href="about.html" class="btn draw-border">About</a>
-            <a href="experience.html" class="btn draw-border">Experience</a>
-            <a href="portfolio.html" class="btn draw-border">Portfolio</a>
+            <a href="index.html" class="mobile-btn">Home →</a>
+            <a href="about.html" class="mobile-btn">About →</a>
+            <a href="experience.html" class="mobile-btn">Experience →</a>
+            <a href="portfolio.html" class="mobile-btn">Portfolio →</a>
         </div>
     </div>`;
 

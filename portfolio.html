@@ -11,16 +11,18 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+        /* nav colors */
         .nav-container {
             background-color: #3c8a7d;
-            position: relative;
-            padding: 20px 0px;
         }
         .draw-border:hover {
             color: #702b3b; 
         }
         .draw-border:hover::before, .draw-border:hover::after {
             border-color: #702b3b;
+        }
+        .mobile-btn:hover {
+            color: #702b3b;
         }
 
         /* body content */
@@ -130,6 +132,16 @@
         $(document).ready(function() {
             $(".nav-container").html(getNavHtml());
             $(".side-bar").html(getSidebarHtml("color"));
+
+            $(".menu").click(function(event) {
+                $(".mobile-nav-links").toggle();
+            })
+
+            $(window).resize(function() {
+                if ($(window).width() > 768) {
+                    $(".mobile-nav-links").css("display", "none");
+                }
+            });
 
             let projectsHtml = "";
             for (const entry of projectsList) {
