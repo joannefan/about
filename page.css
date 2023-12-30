@@ -19,3 +19,11 @@ h1 {
 .draw-border:hover::before, .draw-border:hover::after {
     border-color: #3c8a7d;
 }
+p a {
+    text-decoration: none;
+    color: black;
+    background-color: #fcf5d4;
+}
+p a:hover {
+    background-color: #f7b89b;
+}
