@@ -24,7 +24,7 @@ body {
     cursor: pointer;
 }
 .nav-links {
-    width: 400px;
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,6 +36,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.mobile-nav-links {
+    display: none;
 }
 
 /* button styling inspired by a design from https://uicookies.com/css-buttons/ 
@@ -121,11 +124,19 @@ h1 {
 .menu {
     display: none;
     width: 25px;
-    margin: 40px auto 0;
     cursor: pointer;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 768px) {
+    h1 {
+        font-size: 55px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .nav-links {
+        display: none;
+    }
     .menu {
         display: block;
     }
