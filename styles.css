@@ -38,17 +38,6 @@ body {
     justify-content: space-between;
 }
 
-.btn {
-    /* 
-    text-decoration: none;
-    color: #fbfcfd;
-    padding: 10px 25px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer; */
-}
 /* button styling inspired by a design from https://uicookies.com/css-buttons/ 
     css at https://codepen.io/giana/pen/xdXpJB */
 .draw-border {
@@ -123,7 +112,7 @@ h1 {
     width: 50px;
     height: 100px;
     /* background: linear-gradient(#8F7E4F, #315659); */
-    position: absolute;
+    position: fixed;
     right: 0;
     /* top: 0; */
     bottom: 200px;

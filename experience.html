@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="page.css">
+    <title>About Me</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="static.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+        .nav-container {
+            background-color: #3c8a7d;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .draw-border:hover {
+            color: #702b3b; 
+        }
+        .draw-border:hover::before, .draw-border:hover::after {
+            border-color: #702b3b;
+        }
+
+        /* body content */
+        .work-container {
+            display: block;
+            width: 72%;
+            margin: 0 auto;
+            padding: 20px 0px;
+        }
+        .work-title {
+            display: block;
+            padding: 10px;
+            margin: 10px 0px;
+            line-height: 1.7em;
+            color: #1c4960;
+            font-size: 19px;
+            background-color: #dce9e7;
+        }
+        .work-title h3 {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 800;
+        }
+        .work-date {
+            float: right;
+            font-size: 17px;
+        }
+        .work-container ul {
+            display: block;
+            list-style: none;
+            margin-left: 30px;
+        }
+        .work-container li {
+            display: block;
+            line-height: 1.6em;
+            padding: 4px 0px;
+            text-indent: -14px;
+            /* font-family: 'Courier Prime', monospace; */
+            font-family: 'PT Mono', monospace;
+            font-size: 16px;
+            color: #3a3838;
+        }
+        .work-container a {
+            text-decoration: none;
+            font-family: 'PT Mono', monospace;
+            color: #3a3838;
+            background-color: #fcf5d4;
+        }
+        .work-container a:hover {
+            background-color: #f7b89b;
+        }
+        .work-container:last-of-type {
+            margin-bottom: 80px;
+        }
+        .styled-point {
+            color: green;
+            display: inline-block;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const workEntriesList = [
+            {
+                title: "Tufts Technology Services",
+                date: "Summer 2023",
+                role: "Data Analytics Intern",
+                description: [
+                    "Extended a data pipeline by writing shell scripts to automate backups and building Grafana dashboards to monitor Wi-Fi quality and host performance metrics in real time.",
+                    "Implemented Go tools to anonymize, clean, and condense raw data, and crafted interactive data visualizations in <a href='https://observablehq.com/collection/@joannef/ciscowifi-analysis'>Observable notebooks</a>.",
+                    "Delivered a 20-min presentation on observability, showcasing practical examples from our pipeline to an audience of 100 comprising various levels of technical background."
+                ]
+            },
+            {
+                title: "Tufts Catering",
+                date: "Summer 2023",
+                role: "Commencement Week Worker",
+                description: [
+                    "Setting up and breaking down for events"
+                ]
+            },
+            {
+                title: "Tufts Department of Child Studies and Human Development",
+                date: "Spring 2023",
+                role: "Teacher Assistant for Children's Play",
+                description: [
+                    "Conducted weekly office hours to provide students with support on their papers throughout the semester.",
+                    "Contributed to syllabus refinement and administered the Canvas page."
+                ]
+            },
+            {
+                title: "Tufts Conference and Event Services",
+                date: "Summer 2022",
+                role: "Front Desk and Operations Intern",
+                description: [
+                    "Managed the front desk, handling phone calls and guest check-in and assistance.", 
+                    "Efficiently prepared rooms and facilities for commencement and summer guests."
+                ]
+            }
+        ];
+
+        function createStyledLi(content) {
+            return `<li><div class="styled-point">~$ </div>${content}</li>`;
+        }
+
+        function createWorkEntry(title, date, role, detailArr) {
+            const titleDateRole = `<div class="work-title"><h3>${title}</h3><em class="work-date">${date}</em><br /><em>${role}</em></div>`;
+        
+            let details = "";
+            for (const entry of detailArr) {
+                details += createStyledLi(entry);
+            }
+
+            return `<div class="work-container">${titleDateRole}<ul>${details}</ul></div>`;
+        }
+    </script>
+    <div class="nav-container"></div>
+    <div class="side-bar"></div>
+    <h1>Work Experience</h1>
+
+    <script>
+        $(document).ready(function() {
+            $(".nav-container").html(getNavHtml());
+            $(".side-bar").html(getSidebarHtml("color"));
+
+            let workHtml = "";
+            for (const entry of workEntriesList) {
+                workHtml += createWorkEntry(...Object.values(entry));
+            }
+            $("body").append(workHtml);
+        })
+    </script>
+</body>
+</html>
