@@ -10,16 +10,27 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
     <script src="animation.js"></script>
     <script src="static.js"></script>
+    <style>
+        .nav-container {
+            background-color: transparent;
+        }
+        @media (max-width: 768px) {
+            .mobile-btn {
+                color: black;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="banner">
-        <div class="banner-content">
-            <h2>Welcome to my</h2>
-            <h1>Creative Corner</h1>
-            <a href="about.html" class="btn draw-border">Take a Tour</a>
-        </div>
-        <div class="side-bar"></div>
         <div class="dandelions"></div>
+        <div class="banner-content">
+            <h2>Welcome to Joanne's</h2>
+            <h1>Creative Corner</h1>
+            <a href="about.html" class="btn draw-border">About Me</a>
+        </div>
+        <div class="nav-container"></div>
+        <div class="side-bar"></div>
     </div>
     <!-- <div class="content">
     </div> -->
@@ -32,16 +43,19 @@
 
     <script>
         $(document).ready(function() {
-            $(".banner").prepend(getNavHtml());
+            $(".nav-container").html(getNavHtml());
             $(".side-bar").html(getSidebarHtml("white"));
+
+            $(".menu").click(function(event) {
+                $(".mobile-nav-links").toggle();
+            })
+
+            $(window).resize(function() {
+                if ($(window).width() > 768) {
+                    $(".mobile-nav-links").css("display", "none");
+                }
+            });
         })
     </script>
-
-    <!-- <div class="container"></div> -->
-    <!-- <script>
-        // const data = [8, 18, 7, 10, 19, 20, 10, 10, 6, 19, 17, 18, 23, 23, 13, 12, 15, 6, 9, 8];
-        // drawChart('.container', data);
-      
-    </script> -->
 </body>
 </html>

@@ -3,11 +3,18 @@ function getNavHtml() {
     const html = 
     `<div class="navbar">
         <div class="logo"></div>
-        <!-- <img src="images/logo.png" class="logo"> -->
         <div class="nav-links">
             <a href="index.html" class="btn draw-border">Home</a>
             <a href="about.html" class="btn draw-border">About</a>
             <a href="experience.html" class="btn draw-border">Experience</a>
+            <a href="portfolio.html" class="btn draw-border">Portfolio</a>
+        </div>
+        <img src="images/menu.png" class="menu">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-btn">Home →</a>
+            <a href="about.html" class="mobile-btn">About →</a>
+            <a href="experience.html" class="mobile-btn">Experience →</a>
+            <a href="portfolio.html" class="mobile-btn">Portfolio →</a>
         </div>
     </div>`;
 
@@ -16,8 +23,7 @@ function getNavHtml() {
 
 function getSidebarHtml(color) {
     const html = 
-    `<img src="images/menu.png" class="menu">
-    <div class="social-links">
+    `<div class="social-links">
         <a href="https://www.linkedin.com/in/joannefan/" target="_blank">
             <img src="images/linkedin_${color}.png" alt="LinkedIn logo">
         </a>

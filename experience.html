@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="page.css">
-    <title>About Me</title>
+    <title>Work Experience</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
     <script src="static.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+        /* nav colors */
         .nav-container {
             background-color: #3c8a7d;
-            position: relative;
-            padding: 20px 0px;
         }
         .draw-border:hover {
             color: #702b3b; 
         }
         .draw-border:hover::before, .draw-border:hover::after {
             border-color: #702b3b;
+        }
+        .mobile-btn:hover {
+            color: #702b3b;
         }
 
         /* body content */
@@ -58,7 +59,6 @@
             line-height: 1.6em;
             padding: 4px 0px;
             text-indent: -14px;
-            /* font-family: 'Courier Prime', monospace; */
             font-family: 'PT Mono', monospace;
             font-size: 16px;
             color: #3a3838;
@@ -80,6 +80,20 @@
             display: inline-block;
             margin-right: 8px;
         }
+
+        @media (max-width: 768px) {
+            .work-container {
+                width: 86%;
+            }
+
+            .work-title {
+                font-size: 16px;
+            }
+
+            .work-title h3 {
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -100,7 +114,8 @@
                 date: "Summer 2023",
                 role: "Commencement Week Worker",
                 description: [
-                    "Setting up and breaking down for events"
+                    "Supported kitchen staff in food preparation for commencement events.",
+                    "Prioritized tasks effectively to streamline setup and cleanup workflow."
                 ]
             },
             {
@@ -115,7 +130,7 @@
             {
                 title: "Tufts Conference and Event Services",
                 date: "Summer 2022",
-                role: "Front Desk and Operations Intern",
+                role: "Front Desk & Operations Intern",
                 description: [
                     "Managed the front desk, handling phone calls and guest check-in and assistance.", 
                     "Efficiently prepared rooms and facilities for commencement and summer guests."
@@ -138,6 +153,7 @@
             return `<div class="work-container">${titleDateRole}<ul>${details}</ul></div>`;
         }
     </script>
+
     <div class="nav-container"></div>
     <div class="side-bar"></div>
     <h1>Work Experience</h1>
@@ -146,6 +162,15 @@
         $(document).ready(function() {
             $(".nav-container").html(getNavHtml());
             $(".side-bar").html(getSidebarHtml("color"));
+            $(".menu").click(function(event) {
+                $(".mobile-nav-links").toggle();
+            })
+
+            $(window).resize(function() {
+                if ($(window).width() > 768) {
+                    $(".mobile-nav-links").css("display", "none");
+                }
+            });
 
             let workHtml = "";
             for (const entry of workEntriesList) {

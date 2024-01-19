@@ -4,13 +4,13 @@ function animateSeeds() {
     const container = d3.select(".dandelions");
 
     const seedData = Array.from({ length: numberOfSeeds }, (_, i) => {
-        const initialX = container.node().offsetWidth * 0.69; 
-        const initialY = container.node().offsetWidth * 0.1; 
+        const initialX = container.node().offsetWidth * 0.7;
+        const initialY = container.node().offsetWidth * 0.6;
         const angle = Math.random() * (55 - (-30)) + (-30); // Random angle between -30 and 45 degrees
         const radianAngle = (angle * Math.PI) / 180;
         const vx = Math.cos(radianAngle) * (Math.random() * 2 - 1);
         const vy = Math.sin(radianAngle) * (Math.random() * 2 - 1);
-        const animationDuration = Math.random() * (10000 - 6000) + 6000; // Random duration between 6000 and 10000 milliseconds
+        const animationDuration = Math.random() * (8000 - 4000) + 4000; // Random duration between 6000 and 10000 milliseconds
 
         return {
             id: i,

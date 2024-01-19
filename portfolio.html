@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="page.css">
+    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="static.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+        /* nav colors */
+        .nav-container {
+            background-color: #3c8a7d;
+        }
+        .draw-border:hover {
+            color: #702b3b; 
+        }
+        .draw-border:hover::before, .draw-border:hover::after {
+            border-color: #702b3b;
+        }
+        .mobile-btn:hover {
+            color: #702b3b;
+        }
+
+        /* body content */
+        .projects-container {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        .project {
+            margin: 10px;
+            display: inline-block;
+            background-color: #a4d4cc;
+            padding: 12px 8px;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-size: 20px;
+            border-radius: 10px;
+            width: 380px;
+            text-align: center;
+        }
+        .proj-link {
+            display: block;
+            margin: 10px 0px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #3a3838;
+            background-color: #fcf5d4;
+        }
+        .proj-link:hover {
+            background-color: #f8e39e;
+        }
+        .project p {
+            line-height: 1.8em;
+            font-size: 18px;
+        }
+        .project p a {
+            color: #702b3b;
+            font-weight: bold;
+            background-color: transparent;
+        }
+        .project p a:hover {
+            background-color: #fcf5d4;
+        }
+        .project h5 {
+            margin: 10px 0px;
+            font-size: 22px;
+        }
+
+        @media (max-width: 1000px) {
+            .project {
+                width: 340px;
+            }
+        }
+        @media (max-width: 700px) {
+            .project {
+                padding: 10px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const projectsList = [
+            {
+                title: "TravelBuddy ✈️",
+                link: "https://joannef.sgedu.site/travelbuddy/",
+                description: "Want to make the most of your next trip? Looking for cultural places, adventures in nature, or classic tourist sites? Curate your travel activities with TravelBuddy."
+            },
+            {
+                title: "Data Visualization 📊",
+                link: "https://observablehq.com/collection/@joannef/ciscowifi-analysis",
+                description: "A collection of visualizations exploring access point datasets collected by Cisco wifi controllers on campus. See my <a href='https://observablehq.com/@joannef/04-visualizing-data-traffic-between-users-and-aps'>favorite viz</a>, created using D3.js."
+            },
+            {
+                title: "Gerp 🔎",
+                link: "",
+                description: "Gerp allows the user to query a directory for any string. Matches are displayed with filepaths, line numbers, and the containing lines. Please contact me for access to this C++ project!"
+            },
+            {
+                title: "Zap 📂",
+                link: "",
+                description: "Zap is a compression program that uses the Huffman coding algorithm to compress and decompress text files. Please contact me for access to this C++ project!"
+            },
+            {
+                title: "Image Compression & Transformation",
+                link: "",
+                description: "Please contact me for access to these C projects!"
+            }
+        ];
+
+        function createProject(title, link, details) {
+            const linkHtml = (link === "") ? `<h5>${title}</h5>` : `<a class='proj-link' href='${link}'>${title}</a>`;
+            return `<div class="project">${linkHtml}<p>${details}</p></div>`;
+        }
+    </script>
+
+    <div class="nav-container"></div>
+    <div class="side-bar"></div>
+    <h1>Portfolio</h1>
+    <div class="projects-container">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".nav-container").html(getNavHtml());
+            $(".side-bar").html(getSidebarHtml("color"));
+
+            $(".menu").click(function(event) {
+                $(".mobile-nav-links").toggle();
+            })
+
+            $(window).resize(function() {
+                if ($(window).width() > 768) {
+                    $(".mobile-nav-links").css("display", "none");
+                }
+            });
+
+            let projectsHtml = "";
+            for (const entry of projectsList) {
+                projectsHtml += createProject(...Object.values(entry));
+            }
+            $(".projects-container").html(projectsHtml);
+        })
+    </script>
+</body>
+</html>
