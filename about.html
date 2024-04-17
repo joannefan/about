@@ -8,23 +8,44 @@
     <title>About</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
     <script src="static.js"></script>
+    <style>
+        ul {
+            width: 76%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            line-height: 1.8em;
+            font-size: 19px;
+        }
+        li {
+            list-style-type: none;
+            margin-bottom: 12px;
+        }
+        li::before {
+            content: "☺︎"; 
+            margin-right: 8px; 
+        }
+    </style>
 </head>
 <body>
     <div class="nav-container"></div>
     <div class="side-bar"></div>
     <h1>A Little About Me</h1>
     <p>
-        Hello, my name is Joanne! I'm a junior double majoring in Computer Science and Cognitive & Brain Sciences at Tufts University.
+        Hello, my name is Joanne. I'm a junior double majoring in Computer Science and Cognitive & Brain Sciences at Tufts University.
     </p>
     <p>
-        On the technology side, I am looking to gain more experience in developing web and mobile apps, as well as various kinds of software. In general, I would like to better understand the software development life cycle hands-on. Other interests of mine include UI/UX design and data visualization.
+        On the technology side, I am interested in developing web, desktop, and mobile applications, but I also just enjoy learning about various kinds of software. Other interests of mine include UI/UX design, data visualization, and machine learning. 
     </p>
     <p>
-        What else do I enjoy? Philosophical discussions on topics such as language, consciousness, epistemology, religion, and more! Here's an <a href="https://nespectator.org/the-quandry-of-mind-for-materialism/">opinion piece</a> I wrote for The New England Spectator, a campus journal.
+        Besides CS, I enjoy philosophical discussions on topics such as language, consciousness, epistemology, religion, and more. Here's an <a href="https://nespectator.org/the-quandry-of-mind-for-materialism/">opinion piece</a> I wrote for The New England Spectator, a campus journal. Other hobbies include <a href="https://youtu.be/yJMcghmKqu4">singing</a>, playing the piano, photography, learning languages, and reading. 
     </p>
-    <p>
-        Outside of school, I also enjoy <a href="https://youtu.be/yJMcghmKqu4">singing</a>, playing the piano, photography, learning languages, and reading (recently I finished <em>The Master and Margarita</em> by Mikhail Bulgakov. So many thoughts and questions about this fascinating book...).
-    </p><br /><br />
+    <ul>
+        <li>Last finished?<br /><em>Crime & Punishment</em> by Dostoevsky</li>
+        <li>Currently reading?<br /><em>Beyond Good and Evil</em> by Friedrich Nietzsche,<br /><em>Nine Algorithms That Changed the Future: The Ingenious Ideas That Drive Today's Computers</em> by John MacCormick.</li>
+        <li>Symphony hall favorites?<br />
+            Handel, Bach, Raffaella Aleotti</li>
+    </ul>
+    <br /><br />
 
     <script>
         $(document).ready(function() {

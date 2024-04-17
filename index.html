@@ -11,10 +11,59 @@
     <script src="animation.js"></script>
     <script src="static.js"></script>
     <style>
+        body {
+            height: 100vh;
+            overflow-y: auto;
+        }
         .nav-container {
             background-color: transparent;
         }
+        .text-preview {
+            text-decoration: none;
+            width: 28%;
+            display: inline-block;
+            background: none;
+            cursor: pointer;
+            padding: 0.1em 1.3em;
+            box-shadow: inset 4px 0 0 -2px #c9c097;
+            color: #fbfcfd;
+            position: relative;
+            font-family: 'Roboto Slab', serif;
+            font-size: 17px;
+            line-height: 1.7em;
+            text-align: left;
+        }
+
+        .text-preview:hover {
+            color: #e0d9b8;
+        }
+
+        .text-preview h4 {
+            font-size: 19px;
+            margin: 5px 0px;
+        }
+        .preview-container {
+            position: absolute;
+            bottom: 80px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        @media (max-width: 890px) {
+            .preview-container {
+                bottom: 20px;
+            }
+        }
         @media (max-width: 768px) {
+            .preview-container {
+                bottom: 0px;
+            }
+            .text-preview {
+                font-size: 15px;
+                line-height: 1.4em;
+            }
+            .text-preview h4 {
+                font-size: 17px;
+            }
             .mobile-btn {
                 color: black;
             }
@@ -26,11 +75,15 @@
         <div class="dandelions"></div>
         <div class="banner-content">
             <h2>Welcome to Joanne's</h2>
-            <h1>Creative Corner</h1>
-            <a href="about.html" class="btn draw-border">About Me</a>
+            <h1>Portfolio</h1>
         </div>
         <div class="nav-container"></div>
         <div class="side-bar"></div>
+        <div class="preview-container">
+            <a href="about.html" class="text-preview"><h4>Introductions</h4>Hello, my name is Joanne. I'm a junior studying Computer Science and Cognitive & Brain Sciences...</a>
+            <a href="experience.html" class="text-preview"><h4>Experience</h4>Currently I'm part of a team in the Human Interaction Lab working on this awesome project called GailBot...</a>
+            <a href="about.html" class="text-preview"><h4>Work samples</h4>- GailBot<br />- Data visualizations<br />- Website</a>
+        </div>
     </div>
     <!-- <div class="content">
     </div> -->
