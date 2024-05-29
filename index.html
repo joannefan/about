@@ -1,114 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Joanne's Portfolio</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
-    <script src="animation.js"></script>
-    <script src="static.js"></script>
-    <style>
-        body {
-            height: 100vh;
-            overflow-y: auto;
-        }
-        .nav-container {
-            background-color: transparent;
-        }
-        .text-preview {
-            text-decoration: none;
-            width: 28%;
-            display: inline-block;
-            background: none;
-            cursor: pointer;
-            padding: 0.1em 1.3em;
-            box-shadow: inset 4px 0 0 -2px #c9c097;
-            color: #fbfcfd;
-            position: relative;
-            font-family: 'Roboto Slab', serif;
-            font-size: 17px;
-            line-height: 1.7em;
-            text-align: left;
-        }
-
-        .text-preview:hover {
-            color: #e0d9b8;
-        }
-
-        .text-preview h4 {
-            font-size: 19px;
-            margin: 5px 0px;
-        }
-        .preview-container {
-            position: absolute;
-            bottom: 80px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        @media (max-width: 890px) {
-            .preview-container {
-                bottom: 20px;
-            }
-        }
-        @media (max-width: 768px) {
-            .preview-container {
-                bottom: 0px;
-            }
-            .text-preview {
-                font-size: 15px;
-                line-height: 1.4em;
-            }
-            .text-preview h4 {
-                font-size: 17px;
-            }
-            .mobile-btn {
-                color: black;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script defer src="app.js"></script>
 </head>
 <body>
-    <div class="banner">
-        <div class="dandelions"></div>
-        <div class="banner-content">
-            <h2>Welcome to Joanne's</h2>
-            <h1>Portfolio</h1>
-        </div>
-        <div class="nav-container"></div>
-        <div class="side-bar"></div>
-        <div class="preview-container">
-            <a href="about.html" class="text-preview"><h4>Introductions</h4>Hello, my name is Joanne. I'm a junior studying Computer Science and Cognitive & Brain Sciences...</a>
-            <a href="experience.html" class="text-preview"><h4>Experience</h4>Currently I'm part of a team in the Human Interaction Lab working on this awesome project called GailBot...</a>
-            <a href="about.html" class="text-preview"><h4>Work samples</h4>- GailBot<br />- Data visualizations<br />- Website</a>
-        </div>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="btn draw-border">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="btn draw-border">About</a>
+        </li>
+        <li>
+          <a href="experience.html" class="btn draw-border">Experience</a>
+        </li>
+        <li>
+          <a href="portfolio.html" class="btn draw-border">Portfolio</a>
+        </li>
+        <li class="hamburger">
+          <a href="#">
+            <div class="bar"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <div class="section-content hidden">
+      <h1>Hello, my name is Joanne.</h1>
+      <p>I'm a junior studying Computer Science and Cognitive & Brain Sciences...</p>
+      <a href="about.html">More About Me</a >
     </div>
-    <!-- <div class="content">
-    </div> -->
+  </section>
 
-    <!-- <script>
-        $(document).ready(function () {
-            animateSeeds();
-        });
-    </script> -->
+  <section>
+    <div class="section-content hidden">
+      <p>My journey into software and web development started two and a half years ago when I took an introductory CS course...</p>
+      <a href="portfolio.html">Projects</a >
+    </div>
+  </section>
 
-    <script>
-        $(document).ready(function() {
-            $(".nav-container").html(getNavHtml());
-            $(".side-bar").html(getSidebarHtml("white"));
+  <section>
+    <div class="section-content hidden">
+      <p>Currently I'm interning for a startup!</p>
+      <a href="experience.html">Work Experience</a >
+    </div>
+  </section>
 
-            $(".menu").click(function(event) {
-                $(".mobile-nav-links").toggle();
-            })
-
-            $(window).resize(function() {
-                if ($(window).width() > 768) {
-                    $(".mobile-nav-links").css("display", "none");
-                }
-            });
-        })
-    </script>
+  <!-- <section>
+    <div class="section-content hidden">
+      <p>As well as philosophy, nature, and music...</p>
+      <a >Photo Diary</a >
+    </div>
+  </section> -->
 </body>
 </html>

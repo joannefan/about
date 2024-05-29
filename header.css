@@ -1,0 +1,96 @@
+/* header navigation styling */
+
+header {
+  position: absolute;
+  width: 100%;
+}
+
+header nav {
+  background-color: rgba(95, 158, 160, 0.4); 
+  margin: 0 auto;
+  padding: 0.6rem 2rem;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+header ul a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+  position: relative;
+}
+
+header ul a:hover {
+  cursor: pointer;
+}
+
+header ul a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  left: 50%; /* Center the underline */
+  transform: translateX(-50%);
+  height: 2px; 
+  background-color: white; 
+  transition: width 0.3s ease; 
+}
+
+header ul a:hover::before {
+  width: 80%; 
+}
+
+/* TODO: show hamburger for mobile */
+.hamburger {
+  padding-left: 1.5rem;
+  display: none;
+}
+
+.hamburger a {
+  padding: 0;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(73, 118, 117, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hamburger a .bar {
+  position: relative; /* allows us to use position absolute for the before and after bars */
+  width: 52%;
+  height: 1.5px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger a .bar::before,
+.hamburger a .bar::after {
+  content: "";
+  position: absolute; 
+  left: 50%; /* centers them */
+  transform: translateX(-50%); /* moves them back left by 50% of their width */
+  width: 70%; /* 60% of .bar's width */
+  height: 100%; /* same height as .bar */
+  background-color: inherit; /* same as .bar */
+  border-radius: 2px;
+}
+
+.hamburger .bar::before {
+  top: -5px;
+}
+.hamburger .bar::after {
+  top: 5px;
+}

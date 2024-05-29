@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="page.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
     <title>Portfolio</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
     <script src="static.js"></script>
@@ -12,10 +13,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
         /* nav colors */
-        .nav-container {
-            background-color: #3c8a7d;
-        }
-        .draw-border:hover {
+        /* .draw-border:hover {
             color: #702b3b; 
         }
         .draw-border:hover::before, .draw-border:hover::after {
@@ -23,6 +21,12 @@
         }
         .mobile-btn:hover {
             color: #702b3b;
+        } */
+        body {
+            background-color: white;
+        }
+        header nav {
+            background-color: rgb(22, 59, 53);
         }
 
         /* body content */
@@ -38,7 +42,7 @@
         .project {
             margin: 10px;
             display: inline-block;
-            background-color: #a4d4cc;
+            background-color: rgb(22, 59, 53);
             padding: 12px 8px;
             text-decoration: none;
             box-sizing: border-box;
@@ -64,7 +68,7 @@
             font-size: 18px;
         }
         .project p a {
-            color: #702b3b;
+            color: #71adac;
             font-weight: bold;
             background-color: transparent;
         }
@@ -74,6 +78,7 @@
         .project h5 {
             margin: 10px 0px;
             font-size: 22px;
+            color: rgb(22, 59, 53);
         }
 
         @media (max-width: 1000px) {
@@ -114,15 +119,16 @@
         }
     </script>
 
-    <div class="nav-container"></div>
+    <header></header>
     <div class="side-bar"></div>
-    <h1>Portfolio</h1>
-    <div class="projects-container">
+    <div class="main-content">
+        <h1>Portfolio</h1>
+        <div class="projects-container"></div>
     </div>
 
     <script>
         $(document).ready(function() {
-            $(".nav-container").html(getNavHtml());
+            $("header").html(getNavHtml());
             $(".side-bar").html(getSidebarHtml("color"));
 
             $(".menu").click(function(event) {

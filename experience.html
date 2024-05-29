@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" type="text/css" href="page.css">
     <title>Work Experience</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
@@ -11,10 +12,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
         /* nav colors */
-        .nav-container {
-            background-color: #3c8a7d;
+        body {
+            background-color: white;
         }
-        .draw-border:hover {
+        .main-content h1 {
+            color: #1c4960;
+        }
+        /* .draw-border:hover {
             color: #702b3b; 
         }
         .draw-border:hover::before, .draw-border:hover::after {
@@ -22,6 +26,9 @@
         }
         .mobile-btn:hover {
             color: #702b3b;
+        } */
+        header nav {
+            background-color: rgb(22, 59, 53);
         }
 
         /* body content */
@@ -163,13 +170,15 @@
         }
     </script>
 
-    <div class="nav-container"></div>
+    <header></header>
     <div class="side-bar"></div>
-    <h1>Work Experience</h1>
+    <div class="main-content">
+        <h1>Work Experience</h1>
+    </div>
 
     <script>
         $(document).ready(function() {
-            $(".nav-container").html(getNavHtml());
+            $("header").html(getNavHtml());
             $(".side-bar").html(getSidebarHtml("color"));
             $(".menu").click(function(event) {
                 $(".mobile-nav-links").toggle();
@@ -185,7 +194,7 @@
             for (const entry of workEntriesList) {
                 workHtml += createWorkEntry(...Object.values(entry));
             }
-            $("body").append(workHtml);
+            $(".main-content").append(workHtml);
         })
     </script>
 </body>
