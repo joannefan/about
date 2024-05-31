@@ -12,12 +12,74 @@
   <script defer src="app.js"></script>
   <style>
     #greeting {
+      font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 40px;
       font-weight: 500;
-      color: #fff;
+      color: #d8b1abff;
       text-align: left;
-      transition: opacity 0.5s ease-in-out;
-      padding-bottom: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 18px;
+      height: 80px;
+      align-items: center;
+      background-color: #00000093;
+      white-space: nowrap;
+    }
+
+    #helloworld1,
+    #helloworld2,
+    #helloworld3,
+    #helloworld4,
+    #helloworld5 {
+      display: block;
+      font-family: 'Courier New', Courier, monospace;
+      position: absolute;
+      color: #c3bda2a6;
+      white-space: nowrap;
+    }
+
+    #helloworld1 {
+      bottom: 150px;
+      left: 100px;
+    }
+
+    #helloworld2 {
+      bottom: 40px;
+      left: 300px;
+    }
+
+    #helloworld3 {
+      bottom: 80px;
+      right: 100px;
+    }
+
+    #helloworld4 {
+      bottom: 130px;
+      right: 300px;
+    }
+
+    #helloworld5 {
+      bottom: 100px;
+    }
+
+    @media (max-width: 1000px) {
+      #greeting {
+        font-size: 30px;
+        height: 70px;
+      }
+    }
+
+    @media (max-width: 768px) {  
+      #greeting {
+        font-size: 25px;
+        height: 60px;
+      }
+      #helloworld2 {
+        left: 100px;
+      }
+      #helloworld4 {
+        right: 70px;
+      }
     }
   </style>
 </head>
@@ -35,7 +97,10 @@
           <a href="experience.html" class="btn draw-border">Experience</a>
         </li>
         <li>
-          <a href="portfolio.html" class="btn draw-border">Portfolio</a>
+          <a href="project.html" class="btn draw-border">Projects</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/joannefan/" target="_blank" class="btn draw-border">Contact</a>
         </li>
         <li class="hamburger">
           <a href="#">
@@ -48,23 +113,35 @@
   <section>
     <h1 id="greeting">Hello, I'm Joanne.</h1>
     <div class="section-content hidden">
-      <p>I'm a junior studying Computer Science and Cognitive & Brain Sciences...</p>
+      <p>
+        Aspiring software engineer and web developer.<br />
+        Student at Tufts University, pursuing a BS in Computer Science and Cognitive & Brain Sciences.
+      </p>
       <a href="about.html">More About Me</a >
     </div>
   </section>
 
   <section>
     <div class="section-content hidden">
-      <p>My journey into software and web development started two and a half years ago when I took an introductory CS course...</p>
-      <a href="portfolio.html">Projects</a >
+      <p>What am I currently up to?<br />
+        Interning for a startup.<br />
+        Taking a course in Database Systems.<br />
+        Exploring CSS + JS web animations.
+      </p>
+      <a href="experience.html">Experience & SKills</a >
     </div>
   </section>
 
   <section>
     <div class="section-content hidden">
-      <p>Currently I'm interning for a startup!</p>
-      <a href="experience.html">Work Experience</a >
+      <p>My journey into software development started 2.5 years ago when I took an introductory CS course.</p>
+      <a href="project.html">Projects</a >
     </div>
+    <p id="helloworld1"></p>
+    <p id="helloworld2"></p>
+    <p id="helloworld3"></p>
+    <p id="helloworld4"></p>
+    <p id="helloworld5"></p>
   </section>
 
   <!-- <section>
@@ -74,12 +151,17 @@
     </div>
   </section> -->
   <script>
-    const texts = ["👋 你好, 我是Joanne!", "¡Hola, soy Joanne!", "안녕하세요, 저는 조앤입니다.", "Здравствуйте, меня зовут Джоанна.", "Welcome to my portfolio!"];
+    $(document).ready(function() {
+      adjustFontSize();
+      $(window).on('resize', adjustFontSize);
+    });
+
+    const titles = ["你好, 我是 Joanne!", "¡Hola, soy Joanne!", "안녕하세요, 저는 조앤입니다.", "Здравствуйте, меня зовут Джоанна.", "Welcome to my portfolio!"];
     colors = [
       "#d8b1abff",
       "#ecd3acff",
       "#b4d0baff",
-      "#d0b3c8ff",
+      "#d8b1abff",
       "#9cbdd3ff"
     ];
     let currIdx = 0;
@@ -87,18 +169,47 @@
     document.addEventListener("DOMContentLoaded", (event) => {
         gsap.registerPlugin(TextPlugin);
 
-        function changeTextAndColor() {
-            currIdx = (currIdx + 1) % texts.length;
+        function changeTitle() {
+            currIdx = (currIdx + 1) % titles.length;
 
             gsap.to("#greeting", {
                 duration: 3,
-                text: texts[currIdx],
+                text: titles[currIdx],
                 color: colors[currIdx], 
                 ease: "sine.in",
             });
         }
 
-        setInterval(changeTextAndColor, 5000);
+        setInterval(changeTitle, 4000);
+    });
+  </script>
+
+  <script>
+    const helloCodes = [
+        'cout << "Hello world";',
+        'printf("Hello earth");',
+        'echo "Hello folks"',
+        'console.log("Hello friend");',
+        'print("Hello life")'
+    ];
+
+    document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(TextPlugin);
+
+        function changeText(elemId, newText, dur) {
+          gsap.to(`#${elemId}`, {
+              duration: dur,
+              text: newText,
+              color: "#a0a0a0",
+              ease: "bounce.inOut",
+          });
+        }
+
+        changeText("helloworld1", helloCodes[0], 4);
+        changeText("helloworld2", helloCodes[1], 7);
+        changeText("helloworld3", helloCodes[2], 5);
+        changeText("helloworld4", helloCodes[3], 6);
+        changeText("helloworld5", helloCodes[4], 7);
     });
   </script>
 </body>

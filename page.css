@@ -5,7 +5,7 @@ body {
     background-attachment: fixed;
 }
 
-.main-content p {
+.main-content p, .main-content ul {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -55,7 +55,10 @@ body {
 @media (max-width: 768px) {
     .main-content h1 {
         font-size: 30px;
-        padding-top: 30px;
         padding-bottom: 20px;
+    }
+    .main-content p, .main-content ul {
+        width: 84%;
+        font-size: 16px;
     }
 }

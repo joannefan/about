@@ -30,6 +30,20 @@
             padding-top: 35px;
             padding-bottom: 30px;
         }
+        .skills {
+            display: block;
+            list-style: none;
+        }
+        .skills li {
+            margin: 0 auto;
+            width: 70%;
+            display: block;
+            line-height: 1.6em;
+            padding: 10px 0px;
+            text-indent: -18px;
+            font-size: 18px;
+            color: #dce9e7;
+        }
         /* 
         .mobile-btn:hover {
             color: #702b3b;
@@ -113,6 +127,11 @@
             .work-title h3 {
                 font-size: 21px;
             }
+            .skills li {
+                width: 80%;
+                padding: 8px 0px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -121,11 +140,11 @@
         const workEntriesList = [
             {
                 title: "Kathalyst",
-                date: "Summer 2024",
+                date: "Summer 2024 (Current)",
                 role: "Software Engineer Intern",
                 description: [
-                    "Sped up application loading time.",
-                    "Added queries for processing more languages."
+                    "Sped up loading time of streamlit application by preventing unnecessary reruns.",
+                    "Extended processing to more programming languages, including JavaScript, C/C++, and Java."
                 ]
             },
             {
@@ -133,9 +152,9 @@
                 date: "Spring 2024",
                 role: "Research Assistant",
                 description: [
-                    "Developed test suites for the Python package of GailBot, which annotates verbatim transcripts with Jefferson Transcription symbols for conversation analysis.",
+                    "Developed test suites for GailBot, a software that annotates verbatim transcripts with Jefferson Transcription symbols for conversation analysis.",
                     "Implemented new features in the PyQt6 GUI app to facilitate user experience.",
-                    "Built and embedded a web-based interface for interacting with the IBM Watson Speech-to-Text API."
+                    "Built and embedded an interface for interacting with the IBM Watson Speech-to-Text API."
                 ]
             },
             {
@@ -146,15 +165,6 @@
                     "Extended a data pipeline with shell scripts to automate backups and Grafana dashboards to monitor performance using real-time metrics.",
                     "Implemented Go tools to clean up raw data and crafted interactive D3.js visualizations in Observable.",
                     "Presented practical pipeline examples to an audience of 100 with diverse technical and non-technical backgrounds."
-                ]
-            },
-            {
-                title: "Tufts Catering",
-                date: "Summer 2023",
-                role: "Commencement Week Worker",
-                description: [
-                    "Supported kitchen staff in food preparation for commencement events.",
-                    "Prioritized tasks effectively to streamline setup and cleanup workflow."
                 ]
             },
             {
@@ -195,6 +205,31 @@
     <header></header>
     <div class="side-bar"></div>
     <div class="main-content">
+        <h1>Skills</h1>
+        <ul class="skills">
+            <li>
+                <div class="styled-point">~$ </div>
+                WEB/APP DEVELOPMENT<br />
+                JavaScript, jQuery, Node.js, D3.js, HTML/CSS, PHP, React Native, PyQt6, Streamlit
+            </li>
+            <li>
+                <div class="styled-point">~$ </div>
+                DATABASES<br />
+                MongoDB, MySQL, PostgreSQL
+            </li>
+            <li><div class="styled-point">~$ </div>
+                MACHINE LEARNING<br />
+                Python, scikit-learn, NumPy
+            </li>
+            <li><div class="styled-point">~$ </div>
+                OTHER LANGUAGES<br />
+                C++, C, Scheme, Standard ML
+            </li>
+            <li><div class="styled-point">~$ </div>
+                OTHER TECHNOLOGIES<br />
+                Git, Linux command line, Prometheus, Grafana, LaTeX, SPSS
+            </li>
+        </ul>
         <h1>Work Experience</h1>
     </div>
 

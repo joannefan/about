@@ -13,7 +13,10 @@ function getNavHtml() {
           <a href="experience.html" class="btn draw-border">Experience</a>
         </li>
         <li>
-          <a href="portfolio.html" class="btn draw-border">Portfolio</a>
+          <a href="project.html" class="btn draw-border">Projects</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/joannefan/" target="_blank" class="btn draw-border">Contact</a>
         </li>
         <li class="hamburger">
           <a href="#">

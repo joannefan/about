@@ -35,28 +35,27 @@ section:nth-of-type(1) {
 }
 section:nth-of-type(2) {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), 
-    url('images/abstract2.jpeg'); 
+    linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 0.3) 25%, 
+        rgba(0, 0, 0, 0.3) 75%, 
+        rgba(0, 0, 0, 1) 100%
+    ), 
+    url('images/space.jpeg');
 }
 section:nth-of-type(3) {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), 
-    url('images/abstract2.jpeg'); 
-  transform: scaleY(-1); /* flip section upside down */
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), 
+    url('images/world.jpeg'); 
+  position: relative;
 }
-section:nth-of-type(3) .section-content {
-  transform: scaleY(-1);
-}
+
 
 section:nth-of-type(4) {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), 
     url('images/space.jpeg'); 
-}
-
-.section-content h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
 }
 
 .section-content p {
@@ -114,5 +113,23 @@ section:nth-of-type(4) {
 @media(prefers-reduced-motion) {
   .hidden {
     transition: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-content p {
+    font-size: 20px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {  
+  .section-content p {
+    font-size: 17px;
+    max-width: 400px;
+  }
+  
+  .section-content a {
+    font-size: 0.9rem;
   }
 }
