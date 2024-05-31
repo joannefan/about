@@ -13,22 +13,29 @@
         @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
         /* nav colors */
         body {
-            background-color: white;
+            background-image: 
+              linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('images/forest.jpeg'); 
+        }
+        .main-content {
+            align-items: center;
+            display: block;
+            background-color: rgb(17, 45, 40);
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 100px;
         }
         .main-content h1 {
-            color: #1c4960;
+            color: #dce9e7;
+            padding-top: 35px;
+            padding-bottom: 30px;
         }
-        /* .draw-border:hover {
-            color: #702b3b; 
-        }
-        .draw-border:hover::before, .draw-border:hover::after {
-            border-color: #702b3b;
-        }
+        /* 
         .mobile-btn:hover {
             color: #702b3b;
         } */
-        header nav {
-            background-color: rgb(22, 59, 53);
+        header {
+            top: 0px;
         }
 
         /* body content */
@@ -68,8 +75,9 @@
             text-indent: -14px;
             font-family: 'PT Mono', monospace;
             font-size: 16px;
-            color: #3a3838;
+            color: #dce9e7;
         }
+        /* TODO: unused */
         .work-container a {
             text-decoration: none;
             font-family: 'PT Mono', monospace;
@@ -79,26 +87,31 @@
         .work-container a:hover {
             background-color: #f7b89b;
         }
+        /* end of TODO */
         .work-container:last-of-type {
             margin-bottom: 80px;
         }
         .styled-point {
-            color: green;
+            color: rgb(131, 180, 131);
             display: inline-block;
             margin-right: 8px;
         }
 
         @media (max-width: 768px) {
+            .main-content {
+                width: 90%;
+            }
+
             .work-container {
                 width: 86%;
             }
 
             .work-title {
-                font-size: 16px;
+                font-size: 15px;
             }
 
             .work-title h3 {
-                font-size: 22px;
+                font-size: 21px;
             }
         }
     </style>
@@ -107,13 +120,22 @@
     <script>
         const workEntriesList = [
             {
+                title: "Kathalyst",
+                date: "Summer 2024",
+                role: "Software Engineer Intern",
+                description: [
+                    "Sped up application loading time.",
+                    "Added queries for processing more languages."
+                ]
+            },
+            {
                 title: "Human Interaction Lab",
                 date: "Spring 2024",
                 role: "Research Assistant",
                 description: [
-                    "Refactored modules in a software for annotating verbatim transcripts with Jefferson Transcription symbols for conversation analysis.",
-                    "Developed pytest suites and improved source code documentation.",
-                    "Implemented new features in the PyQt6 GUI app to facilitate user experience."
+                    "Developed test suites for the Python package of GailBot, which annotates verbatim transcripts with Jefferson Transcription symbols for conversation analysis.",
+                    "Implemented new features in the PyQt6 GUI app to facilitate user experience.",
+                    "Built and embedded a web-based interface for interacting with the IBM Watson Speech-to-Text API."
                 ]
             },
             {

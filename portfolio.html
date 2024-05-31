@@ -12,18 +12,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
-        /* nav colors */
-        /* .draw-border:hover {
-            color: #702b3b; 
-        }
-        .draw-border:hover::before, .draw-border:hover::after {
-            border-color: #702b3b;
+        body {
+            background-image: 
+              linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+              url('images/forest.jpeg'); 
         }
         .mobile-btn:hover {
             color: #702b3b;
-        } */
-        body {
-            background-color: white;
         }
         header nav {
             background-color: rgb(22, 59, 53);
@@ -43,7 +38,7 @@
             margin: 10px;
             display: inline-block;
             background-color: rgb(22, 59, 53);
-            padding: 12px 8px;
+            padding: 12px 4px;
             text-decoration: none;
             box-sizing: border-box;
             font-size: 20px;
@@ -53,7 +48,8 @@
         }
         .proj-link {
             display: block;
-            margin: 10px 0px;
+            margin: 10px;
+            padding: 4px 0px;
             font-size: 22px;
             font-weight: bold;
             text-decoration: none;
@@ -61,19 +57,19 @@
             background-color: #fcf5d4;
         }
         .proj-link:hover {
-            background-color: #f8e39e;
+            background-color: #fbe6b9;
         }
         .project p {
+            width: 90%;
+            padding: 0px;
+            margin: 0 auto;
             line-height: 1.8em;
-            font-size: 18px;
+            font-size: 17px;
         }
         .project p a {
             color: #71adac;
             font-weight: bold;
             background-color: transparent;
-        }
-        .project p a:hover {
-            background-color: #fcf5d4;
         }
         .project h5 {
             margin: 10px 0px;
@@ -99,17 +95,32 @@
             {
                 title: "GailBot",
                 link: "https://sites.tufts.edu/hilab/gailbot/",
-                description: "Created by the Human Interaction Lab at Tufts, GailBot is a PyQt application and python package that generates first-pass transcriptions of paralinguistic features."
+                description: "Created by the Human Interaction Lab at Tufts University, GailBot is a PyQt application and python package that generates first-pass transcriptions of paralinguistic features. We are in the process of significantly extending current capabilities, such as supporting advanced model training via Speech-to-Text APIs."
             },
             {
-                title: "(Web Dev) TravelBuddy ✈️",
+                title: "TravelBuddy ✈️",
                 link: "https://joannef.sgedu.site/travelbuddy/",
-                description: "Want to make the most of your next trip? Looking for cultural places, adventures in nature, or classic tourist sites? Curate your travel activities with TravelBuddy."
+                description: "Want to make the most of your next trip? Looking for cultural places, adventures in nature, or classic tourist sites? Curate your travel activities with TravelBuddy. <br />Written with HTML/CSS/JavaScript on the client side, and PHP on the server side, plus MySQL for storing users."
             },
             {
                 title: "Data Visualization 📊",
                 link: "https://observablehq.com/collection/@joannef/ciscowifi-analysis",
-                description: "A collection of visualizations exploring access point datasets collected by Cisco wifi controllers on campus. See my <a href='https://observablehq.com/@joannef/04-visualizing-data-traffic-between-users-and-aps'>favorite viz</a>, created using D3.js."
+                description: "A collection of visualizations exploring access point datasets collected by Cisco wifi controllers on campus. Explore this <a href='https://observablehq.com/@joannef/04-visualizing-data-traffic-between-users-and-aps'>visualization</a> I created using D3.js."
+            },
+            {
+                title: "Gerp 🔎",
+                link: "#",
+                description: "Gerp allows the user to query a directory for any string. Matches are displayed with filepaths, line numbers, and the containing lines. Please contact me for access to this C++ course project."
+            },
+            {
+                title: "Zap 📂",
+                link: "#",
+                description: "Zap is a compression program that uses the Huffman coding algorithm to compress and decompress text files. Please contact me for access to this C++ course project."
+            },
+            {
+                title: "Image Compression & Transformation",
+                link: "#",
+                description: "Please contact me for access to these C course projects."
             }
         ];
 
