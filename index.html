@@ -18,12 +18,12 @@
       color: #d8b1abff;
       text-align: left;
       border-radius: 10px;
-      margin-bottom: 20px;
-      padding: 18px;
-      height: 80px;
+      margin-bottom: 30px;
+      padding: 0;
       align-items: center;
-      background-color: #00000093;
+      background-color: #0000009c;
       white-space: nowrap;
+      box-shadow: 0px 0px 20px 20px #0000009c;
     }
 
     #helloworld1,
@@ -65,14 +65,12 @@
     @media (max-width: 1000px) {
       #greeting {
         font-size: 30px;
-        height: 70px;
       }
     }
 
     @media (max-width: 768px) {  
       #greeting {
         font-size: 24px;
-        height: 60px;
       }
       #helloworld2 {
         left: 100px;
@@ -100,7 +98,7 @@
           <a href="project.html" class="btn draw-border">Projects</a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/joannefan/" target="_blank" class="btn draw-border">Contact</a>
+          <a href="https://github.com/joannefan" target="_blank" class="btn draw-border">GitHub</a>
         </li>
         <li class="hamburger">
           <a href="#">
@@ -116,7 +114,7 @@
       <p>
         Aspiring software engineer and web developer.
       </p>
-      <a href="about.html">More About Me</a >
+      <a href="about.html">ABOUT ME</a >
     </div>
   </section>
 
@@ -127,14 +125,14 @@
         Taking a course in Database Systems.<br />
         Exploring CSS + JS web animations.
       </p>
-      <a href="experience.html">Experience & SKills</a >
+      <a href="experience.html">EXPERIENCE + SKILLS</a >
     </div>
   </section>
 
   <section>
     <div class="section-content hidden">
       <p>My journey into software development commenced 2.5 years ago with an introductory CS course. I found it fascinating, stimulating, and fun.</p>
-      <a href="project.html">Projects</a >
+      <a href="project.html">PROJECTS</a >
     </div>
     <p id="helloworld1"></p>
     <p id="helloworld2"></p>
@@ -142,6 +140,7 @@
     <p id="helloworld4"></p>
     <p id="helloworld5"></p>
   </section>
+  <footer><p>© Joanne Fan 2024</p></footer>
 
   <!-- <section>
     <div class="section-content hidden">
@@ -175,7 +174,7 @@
                 duration: 3,
                 text: titles[currIdx],
                 color: colors[currIdx], 
-                ease: "sine.in",
+                ease: "none",
             });
         }
 
