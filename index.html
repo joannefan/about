@@ -9,13 +9,12 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-  <script defer src="app.js"></script>
+  <script defer src="animation.js"></script>
   <style>
     #greeting {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      font-size: 40px;
-      font-weight: 500;
-      color: #d8b1abff;
+      font-size: 2.6rem;
+      font-weight: 300;
+      color: rgb(216, 197, 171);
       text-align: left;
       border-radius: 10px;
       margin-bottom: 30px;
@@ -64,13 +63,13 @@
 
     @media (max-width: 1000px) {
       #greeting {
-        font-size: 30px;
+        font-size: 1.8rem;
       }
     }
 
     @media (max-width: 768px) {  
       #greeting {
-        font-size: 24px;
+        font-size: 1.5rem;
       }
       #helloworld2 {
         left: 100px;
@@ -108,39 +107,42 @@
       </ul>
     </nav>
   </header>
-  <section>
-    <h1 id="greeting">Hello, I'm Joanne.</h1>
-    <div class="section-content hidden">
-      <p>
-        Aspiring software engineer and web developer.
-      </p>
-      <a href="about.html">ABOUT ME</a >
-    </div>
-  </section>
+  <div class="scroll-container">
+    <section>
+      <h1 id="greeting">Hello, I'm Joanne.</h1>
+      <div class="section-content hidden">
+        <p>
+          Aspiring software engineer and web developer.
+        </p>
+        <a href="about.html">ABOUT ME</a >
+      </div>
+    </section>
 
-  <section>
-    <div class="section-content hidden">
-      <p>What am I currently up to?<br />
-        Interning for a startup.<br />
-        Taking a course in Database Systems.<br />
-        Exploring CSS + JS web animations.
-      </p>
-      <a href="experience.html">EXPERIENCE + SKILLS</a >
-    </div>
-  </section>
+    <section>
+      <div class="section-content hidden">
+        <div class="typewriter">What am I currently up to?</div>
+        <p>
+          Interning for a startup.<br />
+          Taking a course in Database Systems.<br />
+          Exploring CSS + JS web animations.
+        </p>
+        <a href="experience.html">EXPERIENCE + SKILLS</a >
+      </div>
+    </section>
 
-  <section>
-    <div class="section-content hidden">
-      <p>My journey into software development commenced 2.5 years ago with an introductory CS course. I found it fascinating, stimulating, and fun.</p>
-      <a href="project.html">PROJECTS</a >
-    </div>
-    <p id="helloworld1"></p>
-    <p id="helloworld2"></p>
-    <p id="helloworld3"></p>
-    <p id="helloworld4"></p>
-    <p id="helloworld5"></p>
-  </section>
-  <footer><p>© Joanne Fan 2024</p></footer>
+    <section>
+      <div class="section-content hidden">
+        <p>My journey into software development began 2.5 years ago with an introductory CS course. I continue to learn and expand my boundaries.</p>
+        <a href="project.html">PROJECTS</a >
+      </div>
+      <p id="helloworld1"></p>
+      <p id="helloworld2"></p>
+      <p id="helloworld3"></p>
+      <p id="helloworld4"></p>
+      <p id="helloworld5"></p>
+    </section>
+    <footer><p>© Joanne Fan 2024</p></footer>
+  </div>
 
   <!-- <section>
     <div class="section-content hidden">
@@ -149,36 +151,26 @@
     </div>
   </section> -->
   <script>
-    $(document).ready(function() {
-      adjustFontSize();
-      $(window).on('resize', adjustFontSize);
-    });
-
-    const titles = ["你好, 我是 Joanne!", "¡Hola, soy Joanne!", "안녕하세요, 저는 조앤입니다.", "Здравствуйте, меня зовут Джоанна.", "Welcome to my portfolio!"];
-    colors = [
-      "#d8b1abff",
-      "#ecd3acff",
-      "#b4d0baff",
-      "#d8b1abff",
-      "#9cbdd3ff"
-    ];
+    const titles = ["Welcome to my portfolio!", "👋 你好, 我是 Joanne.", "ヾ(^-^)ノ Hola, soy Joanne.", "안녕하세요, 저는 조앤입니다.", "Здравствуйте, меня зовут Джоанна."];
     let currIdx = 0;
 
     document.addEventListener("DOMContentLoaded", (event) => {
         gsap.registerPlugin(TextPlugin);
 
         function changeTitle() {
-            currIdx = (currIdx + 1) % titles.length;
-
             gsap.to("#greeting", {
                 duration: 3,
                 text: titles[currIdx],
-                color: colors[currIdx], 
+                color: "rgb(216, 197, 171)",
                 ease: "none",
             });
+            currIdx = (currIdx + 1) % titles.length;
         }
 
-        setInterval(changeTitle, 4000);
+        setTimeout(() => {
+          changeTitle();
+          setInterval(changeTitle, 4000);
+        }, 2000);
     });
   </script>
 

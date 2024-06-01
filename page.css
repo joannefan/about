@@ -10,10 +10,10 @@ body {
     margin: 0 auto;
     margin-bottom: 20px;
     line-height: 1.8em;
-    font-size: 19px;
+    font-size: 1.18rem;
 }
 .main-content h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     text-align: center;
     padding-top: 90px;
     padding-bottom: 30px;
@@ -22,21 +22,18 @@ body {
     margin-top: 0;
 }
 */
-.side-bar {
-    display: none;
-}
 
-.main-content a {
+.external-link {
     text-decoration: none;
     color: #81a19f;
     position: relative;
 }
 
-.main-content a:hover {
+.external-link:hover {
     cursor: pointer;
 }
 
-.main-content a::before {
+.external-link::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -48,17 +45,17 @@ body {
     transition: width 0.2s ease; 
 }
 
-.main-content a:hover::before {
+.external-link:hover::before {
     width: 100%; 
 }
 
 @media (max-width: 768px) {
     .main-content h1 {
-        font-size: 30px;
+        font-size: 1.87rem;
         padding-bottom: 20px;
     }
     .main-content p, .main-content ul {
         width: 84%;
-        font-size: 16px;
+        font-size: 1rem;
     }
 }

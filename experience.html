@@ -24,6 +24,7 @@
             width: 70%;
             margin: 0 auto;
             margin-top: 100px;
+            border-radius: 10px;
         }
         .main-content h1 {
             color: #dce9e7;
@@ -36,18 +37,14 @@
         }
         .skills li {
             margin: 0 auto;
-            width: 70%;
+            width: 80%;
             display: block;
             line-height: 1.6em;
             padding: 10px 0px;
             text-indent: -18px;
-            font-size: 18px;
+            font-size: 1.12rem;
             color: #dce9e7;
         }
-        /* 
-        .mobile-btn:hover {
-            color: #702b3b;
-        } */
         header {
             top: 0px;
         }
@@ -65,17 +62,17 @@
             margin: 10px 0px;
             line-height: 1.7em;
             color: #1c4960;
-            font-size: 19px;
+            font-size: 1.1rem;
             background-color: #dce9e7;
         }
         .work-title h3 {
             display: inline-block;
-            font-size: 24px;
+            font-size: 1.4rem;
             font-weight: 800;
         }
         .work-date {
             float: right;
-            font-size: 17px;
+            font-size: 1rem;
         }
         .work-container ul {
             display: block;
@@ -87,7 +84,7 @@
             padding: 4px 0px;
             text-indent: -14px;
             font-family: 'PT Mono', monospace;
-            font-size: 16px;
+            font-size: 1rem;
             color: #dce9e7;
         }
         /* TODO: unused */
@@ -100,7 +97,7 @@
         .work-container a:hover {
             background-color: #f7b89b;
         }
-        /* end of TODO */
+        /* TODO end */
         .work-container:last-of-type {
             margin-bottom: 80px;
         }
@@ -116,20 +113,17 @@
             }
 
             .work-container {
-                width: 86%;
+                width: 90%;
             }
 
             .work-title {
-                font-size: 15px;
+                font-size: 0.9rem;
             }
-
             .work-title h3 {
-                font-size: 21px;
+                font-size: 1.25rem;
             }
             .skills li {
-                width: 80%;
-                padding: 8px 0px;
-                font-size: 16px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -184,7 +178,6 @@
     </script>
 
     <header></header>
-    <div class="side-bar"></div>
     <div class="main-content">
         <h1>Skills</h1>
         <ul class="skills">
@@ -218,16 +211,16 @@
     <script>
         $(document).ready(function() {
             $("header").html(getNavHtml());
-            $(".side-bar").html(getSidebarHtml("color"));
-            $(".menu").click(function(event) {
-                $(".mobile-nav-links").toggle();
-            })
 
-            $(window).resize(function() {
-                if ($(window).width() > 768) {
-                    $(".mobile-nav-links").css("display", "none");
-                }
-            });
+            // $(".menu").click(function(event) {
+            //     $(".mobile-nav-links").toggle();
+            // })
+
+            // $(window).resize(function() {
+            //     if ($(window).width() > 768) {
+            //         $(".mobile-nav-links").css("display", "none");
+            //     }
+            // });
 
             let workHtml = "";
             for (const entry of workEntriesList) {

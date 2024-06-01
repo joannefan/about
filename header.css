@@ -4,18 +4,15 @@ header {
   position: fixed;
   width: 100%;
   z-index: 100;
+  background-color: rgba(95, 158, 160, 0.5); 
 }
 
-header nav {
-  background-color: rgba(95, 158, 160, 0.4); 
-  margin: 0 auto;
+header nav ul {
   padding: 0.6rem 2rem;
-  align-items: center;
-}
-
-header ul {
+  max-width: 640px;
+  margin-left: auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
@@ -23,11 +20,11 @@ header ul {
 header ul a {
   text-decoration: none;
   color: #fff;
-  padding: 0 1.5rem;
+  padding: 0rem 0.7rem;
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1rem;
-  position: relative;
+  font-size: 1.1rem;
+  position: relative; /* needed for the hover effect to work */
+  text-shadow: 0 -3px 0 #3b3b3b;
 }
 
 header ul a:hover {
@@ -50,7 +47,7 @@ header ul a:hover::before {
   width: 80%; 
 }
 
-/* TODO: show hamburger for mobile */
+/* TODO: show hamburger for mobile. Currently not used. */
 .hamburger {
   padding-left: 1.5rem;
   display: none;
@@ -96,22 +93,17 @@ header ul a:hover::before {
   top: 5px;
 }
 
-@media (max-width: 768px) {
-  header nav {
-    padding: 0.6rem 0.3rem;
-  }
-
-  header ul a {
-    padding: 0rem 0.7rem;
-    font-size: 0.9rem;
-  }
-}
-
 /* footer */
 footer {
   text-align: center;
 }
 footer p {
-  font-size: 14px;
+  font-size: 0.8rem;
   padding: 10px;
+}
+
+@media (max-width: 768px) {
+  header ul a {
+    font-size: 0.9rem;
+  }
 }

@@ -29,6 +29,7 @@ function getNavHtml() {
     return html;
 }
 
+// not used
 function getSidebarHtml(color) {
     const html = 
     `<div class="social-links">
