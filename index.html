@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joanne's Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="header.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
   <script defer src="animation.js"></script>
@@ -67,19 +69,23 @@
       }
     }
 
-    @media (max-width: 768px) {  
+    @media (max-width: 768px) {
       #greeting {
         font-size: 1.5rem;
       }
+
       #helloworld2 {
         left: 100px;
       }
+
       #helloworld4 {
         right: 70px;
       }
     }
+
   </style>
 </head>
+
 <body>
   <header>
     <nav>
@@ -112,28 +118,27 @@
       <h1 id="greeting">Hello, I'm Joanne.</h1>
       <div class="section-content hidden">
         <p>
-          Aspiring software engineer and web developer.
+          Aspiring full-stack software developer and data analyst.
         </p>
-        <a href="about.html">ABOUT ME</a >
+        <a href="about.html">ABOUT ME</a>
       </div>
     </section>
 
     <section>
       <div class="section-content hidden">
-        <div class="typewriter">What am I currently up to?</div>
+        <div class="typewriter">What have I been up to this summer?</div>
         <p>
-          Interning for a startup.<br />
-          Taking a course in Database Systems.<br />
-          Exploring CSS + JS web animations.
+          Interning as a software engineer for an early startup.<br />
+          Taking courses in Database Systems and Economics.<br />
         </p>
-        <a href="experience.html">EXPERIENCE + SKILLS</a >
+        <a href="experience.html">EXPERIENCE + SKILLS</a>
       </div>
     </section>
 
     <section>
       <div class="section-content hidden">
-        <p>My journey into software development began 2.5 years ago with an introductory CS course. I continue to learn and expand my boundaries.</p>
-        <a href="project.html">PROJECTS</a >
+        <p>My software development journey began 2.5 years ago with an introductory CS course, and I've been eagerly expanding my boundaries and learning ever since!</p>
+        <a href="project.html">PROJECTS</a>
       </div>
       <p id="helloworld1"></p>
       <p id="helloworld2"></p>
@@ -141,7 +146,9 @@
       <p id="helloworld4"></p>
       <p id="helloworld5"></p>
     </section>
-    <footer><p>© Joanne Fan 2024</p></footer>
+    <footer>
+      <p>© Joanne Fan 2024</p>
+    </footer>
   </div>
 
   <!-- <section>
@@ -155,52 +162,53 @@
     let currIdx = 0;
 
     document.addEventListener("DOMContentLoaded", (event) => {
-        gsap.registerPlugin(TextPlugin);
+      gsap.registerPlugin(TextPlugin);
 
-        function changeTitle() {
-            gsap.to("#greeting", {
-                duration: 3,
-                text: titles[currIdx],
-                color: "rgb(216, 197, 171)",
-                ease: "none",
-            });
-            currIdx = (currIdx + 1) % titles.length;
-        }
+      function changeTitle() {
+        gsap.to("#greeting", {
+          duration: 3,
+          text: titles[currIdx],
+          color: "rgb(216, 197, 171)",
+          ease: "none",
+        });
+        currIdx = (currIdx + 1) % titles.length;
+      }
 
-        setTimeout(() => {
-          changeTitle();
-          setInterval(changeTitle, 4000);
-        }, 2000);
+      setTimeout(() => {
+        changeTitle();
+        setInterval(changeTitle, 4000);
+      }, 2000);
     });
   </script>
 
   <script>
     const helloCodes = [
-        'cout << "Hello world";',
-        'printf("Hello earth");',
-        'echo "Hello folks"',
-        'console.log("Hello friend");',
-        'print("Hello life")'
+      'cout << "Hello world";',
+      'printf("Hello earth");',
+      'echo "Hello folks"',
+      'console.log("Hello friend");',
+      'print("Hello life")'
     ];
 
     document.addEventListener("DOMContentLoaded", (event) => {
-        gsap.registerPlugin(TextPlugin);
+      gsap.registerPlugin(TextPlugin);
 
-        function changeText(elemId, newText, dur) {
-          gsap.to(`#${elemId}`, {
-              duration: dur,
-              text: newText,
-              color: "#a0a0a0",
-              ease: "bounce.inOut",
-          });
-        }
+      function changeText(elemId, newText, dur) {
+        gsap.to(`#${elemId}`, {
+          duration: dur,
+          text: newText,
+          color: "#a0a0a0",
+          ease: "bounce.inOut",
+        });
+      }
 
-        changeText("helloworld1", helloCodes[0], 4);
-        changeText("helloworld2", helloCodes[1], 7);
-        changeText("helloworld3", helloCodes[2], 5);
-        changeText("helloworld4", helloCodes[3], 6);
-        changeText("helloworld5", helloCodes[4], 7);
+      changeText("helloworld1", helloCodes[0], 4);
+      changeText("helloworld2", helloCodes[1], 7);
+      changeText("helloworld3", helloCodes[2], 5);
+      changeText("helloworld4", helloCodes[3], 6);
+      changeText("helloworld5", helloCodes[4], 7);
     });
   </script>
 </body>
+
 </html>

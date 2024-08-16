@@ -1,7 +1,6 @@
-
 function getNavHtml() {
-    const html = 
-    `<nav>
+  const html = `
+    <nav>
       <ul>
         <li>
           <a href="index.html" class="btn draw-border">Home</a>
@@ -26,13 +25,13 @@ function getNavHtml() {
       </ul>
     </nav>`;
 
-    return html;
+  return html;
 }
 
 // not used
 function getSidebarHtml(color) {
-    const html = 
-    `<div class="social-links">
+  const html = `
+    <div class="social-links">
         <a href="https://github.com/joannefan" target="_blank">
             <img src="images/linkedin_${color}.png" alt="LinkedIn logo">
         </a>
@@ -41,5 +40,5 @@ function getSidebarHtml(color) {
         </a>
     </div>`;
 
-    return html;
+  return html;
 }

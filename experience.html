@@ -1,233 +1,263 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" type="text/css" href="page.css">
-    <title>Experience</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-    <script src="static.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
-        /* nav colors */
-        body {
-            background-image: 
-              linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('images/forest.jpeg'); 
-        }
-        .main-content {
-            align-items: center;
-            display: block;
-            background-color: rgb(17, 45, 40);
-            width: 70%;
-            margin: 0 auto;
-            margin-top: 100px;
-            border-radius: 10px;
-        }
-        .main-content h1 {
-            color: #dce9e7;
-            padding-top: 35px;
-            padding-bottom: 30px;
-        }
-        .skills {
-            display: block;
-            list-style: none;
-        }
-        .skills li {
-            margin: 0 auto;
-            width: 80%;
-            display: block;
-            line-height: 1.6em;
-            padding: 10px 0px;
-            text-indent: -18px;
-            font-size: 1.12rem;
-            color: #dce9e7;
-        }
-        header {
-            top: 0px;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" type="text/css" href="page.css">
+  <title>Experience</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+  <script src="static.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
-        /* body content */
-        .work-container {
-            display: block;
-            width: 75%;
-            margin: 0 auto;
-            padding: 20px 0px;
-        }
-        .work-title {
-            display: block;
-            padding: 10px;
-            margin: 10px 0px;
-            line-height: 1.7em;
-            color: #1c4960;
-            font-size: 1.1rem;
-            background-color: #dce9e7;
-        }
-        .work-title h3 {
-            display: inline-block;
-            font-size: 1.4rem;
-            font-weight: 800;
-        }
-        .work-date {
-            float: right;
-            font-size: 1rem;
-        }
-        .work-container ul {
-            display: block;
-            list-style: none;
-        }
-        .work-container li {
-            display: block;
-            line-height: 1.6em;
-            padding: 4px 0px;
-            text-indent: -14px;
-            font-family: 'PT Mono', monospace;
-            font-size: 1rem;
-            color: #dce9e7;
-        }
-        /* TODO: unused */
-        .work-container a {
-            text-decoration: none;
-            font-family: 'PT Mono', monospace;
-            color: #3a3838;
-            background-color: #fcf5d4;
-        }
-        .work-container a:hover {
-            background-color: #f7b89b;
-        }
-        /* TODO end */
-        .work-container:last-of-type {
-            margin-bottom: 80px;
-        }
-        .styled-point {
-            color: rgb(131, 180, 131);
-            display: inline-block;
-            margin-right: 8px;
-        }
+    /* nav colors */
+    body {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/forest.jpeg');
+    }
 
-        @media (max-width: 768px) {
-            .main-content {
-                width: 90%;
-            }
+    .main-content {
+      align-items: center;
+      display: block;
+      background-color: rgb(17, 45, 40);
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 100px;
+      border-radius: 10px;
+    }
 
-            .work-container {
-                width: 90%;
-            }
+    .main-content h1 {
+      color: #dce9e7;
+      padding-top: 35px;
+      padding-bottom: 30px;
+    }
 
-            .work-title {
-                font-size: 0.9rem;
-            }
-            .work-title h3 {
-                font-size: 1.25rem;
-            }
-            .skills li {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    .skills {
+      display: block;
+      list-style: none;
+    }
+
+    .skills li {
+      margin: 0 auto;
+      width: 80%;
+      display: block;
+      line-height: 1.6em;
+      padding: 10px 0px;
+      text-indent: -18px;
+      font-size: 1.12rem;
+      color: #dce9e7;
+    }
+
+    header {
+      top: 0px;
+    }
+
+    /* body content */
+    .work-container {
+      display: block;
+      width: 75%;
+      margin: 0 auto;
+      padding: 20px 0px;
+    }
+
+    .work-title {
+      display: block;
+      padding: 10px;
+      margin: 10px 0px;
+      line-height: 1.7em;
+      color: #1c4960;
+      font-size: 1.1rem;
+      background-color: #dce9e7;
+    }
+
+    .work-title h3 {
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .work-date {
+      float: right;
+      font-size: 1rem;
+    }
+
+    .work-container ul {
+      display: block;
+      list-style: none;
+    }
+
+    .work-container li {
+      display: block;
+      line-height: 1.6em;
+      padding: 4px 0px;
+      text-indent: -14px;
+      font-family: 'PT Mono', monospace;
+      font-size: 1rem;
+      color: #dce9e7;
+    }
+
+    /* TODO: unused */
+    .work-container a {
+      text-decoration: none;
+      font-family: 'PT Mono', monospace;
+      color: #3a3838;
+      background-color: #fcf5d4;
+    }
+
+    .work-container a:hover {
+      background-color: #f7b89b;
+    }
+
+    /* TODO end */
+    .work-container:last-of-type {
+      margin-bottom: 80px;
+    }
+
+    .styled-point {
+      color: rgb(131, 180, 131);
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        width: 90%;
+      }
+
+      .work-container {
+        width: 90%;
+      }
+
+      .work-title {
+        font-size: 0.9rem;
+      }
+
+      .work-title h3 {
+        font-size: 1.25rem;
+      }
+
+      .skills li {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
-    <script>
-        const workEntriesList = [
-            {
-                title: "Kathalyst",
-                date: "Summer 2024",
-                role: "Software Engineer Intern",
-                description: [
-                    "Reduced the Streamlit application's rerun speed by over 50%.",
-                    "Extended a functionality to more programming languages, including JavaScript, C/C++, and Java."
-                ]
-            },
-            {
-                title: "Human Interaction Lab",
-                date: "Spring 2024",
-                role: "Research Assistant",
-                description: [
-                    "Tested and debugged source code for the Python package of GailBot and implemented new features in the PyQt desktop application.",
-                    "Created a laughter detection suite for a workshop demo.",
-                    "Implemented a web-based widget that provides a user-friendly interface for interacting with the IBM Watson Speech-to-text API."
-                ]
-            },
-            {
-                title: "Tufts Technology Services",
-                date: "Summer 2023",
-                role: "Data Analytics Intern",
-                description: [
-                    "Extended a data pipeline with shell scripts to automate backups and Grafana dashboards to monitor performance using real-time metrics.",
-                    "Crafted interactive Observable and D3.js visualizations for collected data."
-                ]
-            }
-        ];
+  <script>
+    const workEntriesList = [
+      {
+        title: "Kathalyst",
+        date: "Summer 2024",
+        role: "Software Engineer Intern",
+        description: [
+          "Accelerated new feature deployment at an early-stage startup by establishing a GitHub Action CI/CD pipeline.",
+          "Developed an integrated Azure and Grafana environment to monitor application metrics and improve error identification.",
+          "Revamped application architecture to increase loading speed by over 50%.",
+          "Built a retrieval-augmented generation (RAG) pipeline to retrieve relevant context for large language models."
+        ]
+      },
+      {
+        title: "Human Interaction Lab",
+        date: "Spring 2024",
+        role: "Research Assistant",
+        description: [
+          "Enhanced the GailBot Python package by adding support for multimedia formats and enabling interaction with AWS S3 objects.",
+          "Prototyped a user interface within a PyQt desktop application for interacting with the IBM Watson Speech-to-text API.",
+          "Debugged and tested the application prior to a UCLA workshop for Conversation Analysis researchers."
+        ]
+      },
+      {
+        title: "Tufts Technology Services",
+        date: "Summer 2023",
+        role: "Data Analytics Intern",
+        description: [
+          "Extended a data pipeline with Bash scripts to automate data backups.",
+          "Configured custom Prometheus metrics and alerts, and created Grafana dashboards for real-time performance monitoring.",
+          "Implemented Go scripts to process raw JSON data and crafted interactive D3.js visualizations to synthesize data insights."
+        ]
+      }
+    ];
 
-        function createStyledLi(content) {
-            return `<li><div class="styled-point">~$ </div>${content}</li>`;
-        }
+    function createStyledLi(content) {
+      return `<li><div class="styled-point">~$ </div>${content}</li>`;
+    }
 
-        function createWorkEntry(title, date, role, detailArr) {
-            const titleDateRole = `<div class="work-title"><h3>${title}</h3><em class="work-date">${date}</em><br /><em>${role}</em></div>`;
-        
-            let details = "";
-            for (const entry of detailArr) {
-                details += createStyledLi(entry);
-            }
+    function createWorkEntry(title, date, role, detailArr) {
+      const titleDateRole = `<div class="work-title"><h3>${title}</h3><em class="work-date">${date}</em><br /><em>${role}</em></div>`;
 
-            return `<div class="work-container">${titleDateRole}<ul>${details}</ul></div>`;
-        }
-    </script>
+      let details = "";
+      for (const entry of detailArr) {
+        details += createStyledLi(entry);
+      }
 
-    <header></header>
-    <div class="main-content">
-        <h1>Skills</h1>
-        <ul class="skills">
-            <li>
-                <div class="styled-point">~$ </div>
-                WEB/APP DEVELOPMENT<br />
-                JavaScript, jQuery, Node.js, D3.js, HTML/CSS, PHP, React Native, Streamlit
-            </li>
-            <li>
-                <div class="styled-point">~$ </div>
-                DATABASES<br />
-                MongoDB, MySQL, PostgreSQL
-            </li>
-            <li><div class="styled-point">~$ </div>
-                MACHINE LEARNING<br />
-                Python, scikit-learn, NumPy
-            </li>
-            <li><div class="styled-point">~$ </div>
-                OTHER LANGUAGES<br />
-                C++, C, Scheme, Standard ML
-            </li>
-            <li><div class="styled-point">~$ </div>
-                OTHER TECHNOLOGIES<br />
-                Git, Linux command line, Prometheus, Grafana, Docker, LaTeX, SPSS
-            </li>
-        </ul>
-        <h1>Work Experience</h1>
-    </div>
-    <footer><p>© Joanne Fan 2024</p></footer>
+      return `<div class="work-container">${titleDateRole}<ul>${details}</ul></div>`;
+    }
+  </script>
 
-    <script>
-        $(document).ready(function() {
-            $("header").html(getNavHtml());
+  <header></header>
+  <div class="main-content">
+    <h1>Skills</h1>
+    <ul class="skills">
+      <li>
+        <div class="styled-point">~$ </div>
+        LANGUAGES<br />
+        Python, JavaScript, C/C++, HTML/CSS, PHP, Scheme, Standard ML
+      </li>
+      <li>
+        <div class="styled-point">~$ </div>
+        DATABASES<br />
+        PostgreSQL, MySQL, MongoDB, Neo4j
+      </li>
+      <li>
+        <div class="styled-point">~$ </div>
+        LIBRARIES<br />
+        jQuery, D3.js, scikit-learn, NumPy, LangChain
+      </li>
+      <li>
+        <div class="styled-point">~$ </div>
+        FRAMEWORKS<br />
+        React Native, Node.js
+      </li>
+      <li>
+        <div class="styled-point">~$ </div>
+        TOOLS<br />
+        Git, Unix Shell, Azure, Prometheus, Grafana, Jira, Docker, WordPress, SPSS, LaTeX
+      </li>
+    </ul>
+    <h1>Experience</h1>
+  </div>
+  <footer>
+    <p>© Joanne Fan 2024</p>
+  </footer>
 
-            // $(".menu").click(function(event) {
-            //     $(".mobile-nav-links").toggle();
-            // })
+  <script>
+    $(document).ready(function () {
+      $("header").html(getNavHtml());
 
-            // $(window).resize(function() {
-            //     if ($(window).width() > 768) {
-            //         $(".mobile-nav-links").css("display", "none");
-            //     }
-            // });
+      // $(".menu").click(function(event) {
+      //     $(".mobile-nav-links").toggle();
+      // })
 
-            let workHtml = "";
-            for (const entry of workEntriesList) {
-                workHtml += createWorkEntry(...Object.values(entry));
-            }
-            $(".main-content").append(workHtml);
-        })
-    </script>
+      // $(window).resize(function() {
+      //     if ($(window).width() > 768) {
+      //         $(".mobile-nav-links").css("display", "none");
+      //     }
+      // });
+
+      let workHtml = "";
+      for (const entry of workEntriesList) {
+        workHtml += createWorkEntry(...Object.values(entry));
+      }
+      $(".main-content").append(workHtml);
+    })
+  </script>
 </body>
+
 </html>

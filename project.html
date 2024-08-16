@@ -1,157 +1,174 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="page.css">
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <title>Projects</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-    <script src="static.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
-        body {
-            background-image: 
-              linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-              url('images/forest.jpeg'); 
-        }
-        .mobile-btn:hover {
-            color: #702b3b;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="page.css">
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <title>Projects</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+  <script src="static.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
-        /* body content */
-        .projects-container {
-            width: 90%;
-            display: flex;
-            flex-wrap: wrap;
-            /* justify-content: space-between; */
-            justify-content: space-around;
-            margin: 0 auto;
-            margin-bottom: 50px;
-        }
-        .project {
-            margin: 10px;
-            display: inline-block;
-            background-color: rgb(22, 59, 53);
-            padding: 12px 4px;
-            text-decoration: none;
-            box-sizing: border-box;
-            font-size: 1.25rem;
-            border-radius: 6px;
-            width: 380px;
-            text-align: center;
-        }
-        .proj-link, .project h5 {
-            border-radius: 6px;
-            display: block;
-            margin: 10px;
-            padding: 4px 0px;
-            font-size: 1.37rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: #81a19f;
-            background-color: #fcf5d4;
-            box-shadow: none; 
-            transform: translateY(0);
-            transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-        .proj-link:hover, .proj-link:focus {
-            box-shadow: 0 0.12em 0 0.14em rgb(60, 135, 123);
-            transform: translateY(-0.25em);
-        }
-        .project p {
-            width: 90%;
-            padding: 0px;
-            margin: 0 auto;
-            line-height: 1.8em;
-            font-size: 1rem;
-        }
-        .project p a {
-            font-weight: bold;
-        }
+    body {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+        url('images/forest.jpeg');
+    }
 
-        @media (max-width: 1000px) {
-            .project {
-                width: 340px;
-            }
-        }
-        @media (max-width: 700px) {
-            .project {
-                padding: 10px 6px;
-            }
-        }
-    </style>
+    .mobile-btn:hover {
+      color: #702b3b;
+    }
+
+    /* body content */
+    .projects-container {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      justify-content: space-around;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+
+    .project {
+      margin: 10px;
+      display: inline-block;
+      background-color: rgb(22, 59, 53);
+      padding: 12px 4px;
+      text-decoration: none;
+      box-sizing: border-box;
+      font-size: 1.25rem;
+      border-radius: 6px;
+      width: 380px;
+      text-align: center;
+    }
+
+    .proj-link,
+    .project h5 {
+      border-radius: 6px;
+      display: block;
+      margin: 10px;
+      padding: 4px 0px;
+      font-size: 1.37rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #81a19f;
+      background-color: #fcf5d4;
+      box-shadow: none;
+      transform: translateY(0);
+      transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .proj-link:hover,
+    .proj-link:focus {
+      box-shadow: 0 0.12em 0 0.14em rgb(60, 135, 123);
+      transform: translateY(-0.25em);
+    }
+
+    .project p {
+      width: 90%;
+      padding: 0px;
+      margin: 0 auto;
+      line-height: 1.8em;
+      font-size: 1rem;
+    }
+
+    .project p a {
+      font-weight: bold;
+    }
+
+    @media (max-width: 1000px) {
+      .project {
+        width: 340px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .project {
+        padding: 10px 6px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
-    <script>
-        const projectsList = [
-            {
-                title: "GailBot",
-                link: "https://sites.tufts.edu/hilab/gailbot/",
-                description: "Created by the Human Interaction Lab at Tufts, GailBot is a desktop application and python package that generates first-pass transcriptions of paralinguistic features. We are in the process of significantly extending current capabilities, such as supporting advanced model training with speech-to-text APIs."
-            },
-            {
-                title: "TravelBuddy ✈️",
-                link: "https://github.com/joannefan/travelBuddy",
-                description: "Want to make the most of your next trip? Looking for cultural places, adventures in nature, or classic tourist sites? Curate your travel activities with TravelBuddy. <br />Written with HTML/CSS/JavaScript on the client side, and PHP on the server side, plus MySQL for storing users."
-            },
-            {
-                title: "Data Visualization 📊",
-                link: "https://observablehq.com/collection/@joannef/ciscowifi-analysis",
-                description: "A collection of visualizations exploring access point datasets collected by Cisco wifi controllers on campus. Explore this <a href='https://observablehq.com/@joannef/04-visualizing-data-traffic-between-users-and-aps' target='_blank' class='external-link'>visualization</a> I created using D3.js."
-            },
-            {
-                title: "Gerp 🔎",
-                link: "",
-                description: "(Course project) Gerp allows the user to search a directory for any string, displaying the matching lines along with filepaths and line numbers. Please contact me for access to this C++ project."
-            },
-            {
-                title: "Zap 📂",
-                link: "",
-                description: "(Course project) Zap uses the Huffman coding algorithm to compress and decompress text files. Please contact me for access to this C++ project."
-            },
-            {
-                title: "Image Compression & Transformations",
-                link: "",
-                description: "(Course project) Please contact me for access."
-            }
-        ];
+  <script>
+    const projectsList = [
+      {
+        title: "GailBot",
+        link: "https://sites.tufts.edu/hilab/gailbot/",
+        description: "Created by the Human Interaction Lab at Tufts, GailBot is a desktop application and python package that generates first-pass transcriptions of paralinguistic features. We are in the process of significantly extending current capabilities, such as supporting advanced model training with speech-to-text APIs."
+      },
+      {
+        title: "TravelBuddy ✈️",
+        link: "https://github.com/joannefan/travelBuddy",
+        description: "Want to make the most of your next trip? Looking for cultural places, adventures in nature, or classic tourist sites? Curate your travel activities with TravelBuddy. <br />Written with HTML/CSS/JavaScript on the client side, and PHP on the server side, plus MySQL for storing users."
+      },
+      {
+        title: "Data Visualization 📊",
+        link: "https://observablehq.com/collection/@joannef/ciscowifi-analysis",
+        description: "A collection of visualizations exploring access point datasets collected by Cisco wifi controllers on campus. Explore this <a href='https://observablehq.com/@joannef/04-visualizing-data-traffic-between-users-and-aps' target='_blank' class='external-link'>visualization</a> I created using D3.js."
+      },
+      {
+        title: "Gerp 🔎",
+        link: "",
+        description: "(Course project) Gerp allows the user to search a directory for any string, displaying the matching lines along with filepaths and line numbers. Please contact me for access to this C++ project."
+      },
+      {
+        title: "Zap 📂",
+        link: "",
+        description: "(Course project) Zap uses the Huffman coding algorithm to compress and decompress text files. Please contact me for access to this C++ project."
+      },
+      {
+        title: "Image Compression & Transformations",
+        link: "",
+        description: "(Course project) Please contact me for access."
+      }
+    ];
 
-        function createProject(title, link, details) {
-            const linkHtml = (link === "") ? `<h5>${title}</h5>` : `<a class='proj-link' href='${link}'>${title}</a>`;
-            return `<div class="project">${linkHtml}<p>${details}</p></div>`;
-        }
-    </script>
+    function createProject(title, link, details) {
+      const linkHtml = (link === "") ? `<h5>${title}</h5>` : `<a class='proj-link' href='${link}'>${title}</a>`;
+      return `<div class="project">${linkHtml}<p>${details}</p></div>`;
+    }
+  </script>
 
-    <header></header>
-    <div class="main-content">
-        <h1>Projects</h1>
-        <div class="projects-container"></div>
-    </div>
-    <footer><p>© Joanne Fan 2024</p></footer>
+  <header></header>
+  <div class="main-content">
+    <h1>Projects</h1>
+    <div class="projects-container"></div>
+  </div>
+  <footer>
+    <p>© Joanne Fan 2024</p>
+  </footer>
 
-    <script>
-        $(document).ready(function() {
-            $("header").html(getNavHtml());
+  <script>
+    $(document).ready(function () {
+      $("header").html(getNavHtml());
 
-            // $(".menu").click(function(event) {
-            //     $(".mobile-nav-links").toggle();
-            // })
+      // $(".menu").click(function(event) {
+      //     $(".mobile-nav-links").toggle();
+      // })
 
-            // $(window).resize(function() {
-            //     if ($(window).width() > 768) {
-            //         $(".mobile-nav-links").css("display", "none");
-            //     }
-            // });
+      // $(window).resize(function() {
+      //     if ($(window).width() > 768) {
+      //         $(".mobile-nav-links").css("display", "none");
+      //     }
+      // });
 
-            let projectsHtml = "";
-            for (const entry of projectsList) {
-                projectsHtml += createProject(...Object.values(entry));
-            }
-            $(".projects-container").html(projectsHtml);
-        })
-    </script>
+      let projectsHtml = "";
+      for (const entry of projectsList) {
+        projectsHtml += createProject(...Object.values(entry));
+      }
+      $(".projects-container").html(projectsHtml);
+    })
+  </script>
 </body>
+
 </html>

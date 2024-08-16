@@ -1,61 +1,66 @@
 body {
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.main-content p, .main-content ul {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    line-height: 1.8em;
-    font-size: 1.18rem;
+.main-content p,
+.main-content ul {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  line-height: 1.8em;
+  font-size: 1.18rem;
 }
+
 .main-content h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    padding-top: 90px;
-    padding-bottom: 30px;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 30px;
 }
+
 /* .menu {
     margin-top: 0;
 }
 */
 
 .external-link {
-    text-decoration: none;
-    color: #81a19f;
-    position: relative;
+  text-decoration: none;
+  color: #81a19f;
+  position: relative;
 }
 
 .external-link:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .external-link::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    left: 50%; 
-    transform: translateX(-50%);
-    height: 1px; 
-    background-color: #81a19f;
-    transition: width 0.2s ease; 
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background-color: #81a19f;
+  transition: width 0.2s ease;
 }
 
 .external-link:hover::before {
-    width: 100%; 
+  width: 100%;
 }
 
 @media (max-width: 768px) {
-    .main-content h1 {
-        font-size: 1.87rem;
-        padding-bottom: 20px;
-    }
-    .main-content p, .main-content ul {
-        width: 84%;
-        font-size: 1rem;
-    }
+  .main-content h1 {
+    font-size: 1.87rem;
+    padding-bottom: 20px;
+  }
+
+  .main-content p,
+  .main-content ul {
+    width: 84%;
+    font-size: 1rem;
+  }
 }

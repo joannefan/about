@@ -1,68 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" type="text/css" href="page.css">
-    <title>About</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-    <script src="static.js"></script>
-    <style>
-        body {
-            background-image: 
-              linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-              url('images/forest.jpeg'); 
-        }
-        .main-content ul {
-            width: 76%;
-        }
-        .main-content ul li {
-            list-style-type: none;
-            margin-bottom: 12px;
-        }
-        .main-content ul li::before {
-            content: "˃"; 
-            margin-right: 8px; 
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" type="text/css" href="page.css">
+  <title>About</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+  <script src="static.js"></script>
+  <style>
+    body {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+        url('images/forest.jpeg');
+    }
+
+    .main-content ul {
+      width: 76%;
+    }
+
+    .main-content ul li {
+      list-style-type: none;
+      margin-bottom: 12px;
+    }
+
+    .main-content ul li::before {
+      content: "˃";
+      margin-right: 8px;
+    }
+
+  </style>
 </head>
+
 <body>
-    <header></header>
-    <div class="main-content">
-        <h1>A Little About Me</h1>
-        <p>
-            Hello, my name is Joanne. I'm a third-year undergraduate studying Computer Science and Cognitive & Brain Sciences at Tufts University.
-        </p>
-        <p>
-            I have some experience developing web, desktop, and mobile applications and really enjoy it. I'm continually striving to improve in my use and understanding of the tools and technologies I utilize. Other interests of mine include programming languages and interactive data visualizations. In general, I find a lot of joy and fun in learning new technologies. For example, recently I have been dabbling in tree-sitter and using its queries to explore abstract syntax trees for various languages.
-        </p>
-        <p>
-            I also enjoy philosophical discussions on topics such as language, consciousness, epistemology, religion, and more. Here's an <a href="https://nespectator.org/the-quandry-of-mind-for-materialism/" target="_blank" class="external-link">opinion piece</a> I wrote for The New England Spectator, a campus journal. Other hobbies include <a href="https://youtu.be/yJMcghmKqu4" target="_blank" class="external-link">singing</a>, playing the piano, photography, learning languages, and reading. 
-        </p>
-        <ul>
-            <li>Most recently read?<br /><em>UNIX: A History and a Memoir</em> by Brian W. Kernighan</li>
-            <li>A fun github discovery?<br /><a href="https://tree-sitter.github.io/tree-sitter/" target="_blank" class="external-link">tree-sitter</a></li>
-            <li>Contact Information?<br /><a href="https://github.com/joannefan" target="_blank" class="external-link">GitHub,</a> <a href="https://www.linkedin.com/in/joannefan/" target="_blank" class="external-link">LinkedIn</a></li>
-        </ul>
-    </div>
-    <footer><p>© Joanne Fan 2024</p></footer>
+  <header></header>
+  <div class="main-content">
+    <h1>A Little About Me</h1>
+    <p>
+      Hello! I'm Joanne, a rising senior undergraduate studying Computer Science and Cognitive &amp; Brain
+      Sciences at Tufts University. I'm currently looking for full-time opportunities in software engineering, data analytics, and related fields.
+    </p>
+    <p>
+      I am interested in many things: web development, databases, and data visualizations, for a start. I also have some DevOps experience, working with tools like Azure, Prometheus, and Grafana to monitor application and server performance. Additionally, I love exploring programming languages and machine learning. Recently, for example, I experimented with a wonderful parser generator tool called tree-sitter and worked with retrieval-augmented generation and large language models. In general, I find a lot of joy in learning new technologies and applying them in creative ways.
+    </p>
+    <p>
+      What else? I'm always down for deep philosophical discussions, <a href="https://youtu.be/yJMcghmKqu4" target="_blank" class="external-link">singing</a>, playing the
+      piano, learning languages, and reading.
+    </p>
+    <ul>
+      <li>Recently read?<br /><em>UNIX: A History and a Memoir</em> by Brian W. Kernighan</li>
+      <li>Obsessed with?<br /><a href="https://tree-sitter.github.io/tree-sitter/" target="_blank"
+          class="external-link">tree-sitter</a></li>
+      <li>Contact Information?<br /><a href="https://github.com/joannefan" target="_blank"
+          class="external-link">GitHub,</a> <a href="https://www.linkedin.com/in/joannefan/" target="_blank"
+          class="external-link">LinkedIn</a></li>
+    </ul>
+  </div>
+  <footer>
+    <p>© Joanne Fan 2024</p>
+  </footer>
 
-    <script>
-        $(document).ready(function() {
-            $("header").html(getNavHtml());
-            
-            // $(".menu").click(function(event) {
-            //     $(".mobile-nav-links").toggle();
-            // })
+  <script>
+    $(document).ready(function () {
+      $("header").html(getNavHtml());
 
-            // $(window).resize(function() {
-            //     if ($(window).width() > 768) {
-            //         $(".mobile-nav-links").css("display", "none");
-            //     }
-            // });
-        })
-    </script>
+      // $(".menu").click(function(event) {
+      //     $(".mobile-nav-links").toggle();
+      // })
+
+      // $(window).resize(function() {
+      //     if ($(window).width() > 768) {
+      //         $(".mobile-nav-links").css("display", "none");
+      //     }
+      // });
+    })
+  </script>
 </body>
+
 </html>

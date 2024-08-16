@@ -4,7 +4,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: rgba(95, 158, 160, 0.5); 
+  background-color: rgba(95, 158, 160, 0.5);
 }
 
 header nav ul {
@@ -23,7 +23,8 @@ header ul a {
   padding: 0rem 0.7rem;
   text-transform: uppercase;
   font-size: 1.1rem;
-  position: relative; /* needed for the hover effect to work */
+  position: relative;
+  /* needed for the hover effect to work */
   text-shadow: 0 -3px 0 #3b3b3b;
 }
 
@@ -36,15 +37,16 @@ header ul a::before {
   position: absolute;
   bottom: 0;
   width: 0;
-  left: 50%; /* Center the underline */
+  left: 50%;
+  /* Center the underline */
   transform: translateX(-50%);
-  height: 2px; 
-  background-color: white; 
-  transition: width 0.3s ease; 
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
 }
 
 header ul a:hover::before {
-  width: 80%; 
+  width: 80%;
 }
 
 /* TODO: show hamburger for mobile. Currently not used. */
@@ -67,7 +69,8 @@ header ul a:hover::before {
 }
 
 .hamburger a .bar {
-  position: relative; /* allows us to use position absolute for the before and after bars */
+  position: relative;
+  /* allows us to use position absolute for the before and after bars */
   width: 52%;
   height: 1.5px;
   background-color: #fff;
@@ -77,18 +80,24 @@ header ul a:hover::before {
 .hamburger a .bar::before,
 .hamburger a .bar::after {
   content: "";
-  position: absolute; 
-  left: 50%; /* centers them */
-  transform: translateX(-50%); /* moves them back left by 50% of their width */
-  width: 70%; /* 60% of .bar's width */
-  height: 100%; /* same height as .bar */
-  background-color: inherit; /* same as .bar */
+  position: absolute;
+  left: 50%;
+  /* centers them */
+  transform: translateX(-50%);
+  /* moves them back left by 50% of their width */
+  width: 70%;
+  /* 60% of .bar's width */
+  height: 100%;
+  /* same height as .bar */
+  background-color: inherit;
+  /* same as .bar */
   border-radius: 2px;
 }
 
 .hamburger .bar::before {
   top: -5px;
 }
+
 .hamburger .bar::after {
   top: 5px;
 }
@@ -97,6 +106,7 @@ header ul a:hover::before {
 footer {
   text-align: center;
 }
+
 footer p {
   font-size: 0.8rem;
   padding: 10px;
@@ -106,6 +116,7 @@ footer p {
   header ul a {
     font-size: 0.9rem;
   }
+
   header nav ul {
     padding: 0.6rem 1.2rem;
   }
