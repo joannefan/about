@@ -1,0 +1,31 @@
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+
+.env
+
+.DS_Store 
+
+# Ignore IDE/editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Ignore specific files
+resume.tex
+indexOld.html
+TODO.txt
+
+# Ignore dirs
+images/images_large/
+images/notused/
