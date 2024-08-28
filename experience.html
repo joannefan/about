@@ -73,6 +73,7 @@
       color: #1c4960;
       font-size: 1.1rem;
       background-color: #dce9e7;
+      border-radius: 6px;
     }
 
     .work-title h3 {
@@ -151,40 +152,6 @@
 
 <body>
   <script>
-    const workEntriesList = [
-      {
-        title: "Kathalyst",
-        date: "Summer 2024",
-        role: "Software Engineer Intern",
-        description: [
-          "Accelerated new feature deployment at an early-stage startup by establishing a GitHub Action CI/CD pipeline.",
-          "Developed an integrated Azure and Grafana environment to monitor application metrics and improve error identification.",
-          "Revamped application architecture to increase loading speed by over 50%.",
-          "Built a retrieval-augmented generation (RAG) pipeline to retrieve relevant context for large language models."
-        ]
-      },
-      {
-        title: "Human Interaction Lab",
-        date: "Spring 2024",
-        role: "Research Assistant",
-        description: [
-          "Enhanced the GailBot Python package by adding support for multimedia formats and enabling interaction with AWS S3 objects.",
-          "Prototyped a user interface within a PyQt desktop application for interacting with the IBM Watson Speech-to-text API.",
-          "Debugged and tested the application prior to a UCLA workshop for Conversation Analysis researchers."
-        ]
-      },
-      {
-        title: "Tufts Technology Services",
-        date: "Summer 2023",
-        role: "Data Analytics Intern",
-        description: [
-          "Extended a data pipeline with Bash scripts to automate data backups.",
-          "Configured custom Prometheus metrics and alerts, and created Grafana dashboards for real-time performance monitoring.",
-          "Implemented Go scripts to process raw JSON data and crafted interactive D3.js visualizations to synthesize data insights."
-        ]
-      }
-    ];
-
     function createStyledLi(content) {
       return `<li><div class="styled-point">~$ </div>${content}</li>`;
     }
@@ -208,7 +175,7 @@
       <li>
         <div class="styled-point">~$ </div>
         LANGUAGES<br />
-        Python, JavaScript, C/C++, HTML/CSS, PHP, Scheme, Standard ML
+        Python, JavaScript, C, C++, PHP, Scheme, Standard ML, x86 assembly
       </li>
       <li>
         <div class="styled-point">~$ </div>
@@ -217,18 +184,22 @@
       </li>
       <li>
         <div class="styled-point">~$ </div>
-        LIBRARIES<br />
-        jQuery, D3.js, scikit-learn, NumPy, LangChain
+        WEB/MOBILE DEVELOPMENT<br />
+        HTML, CSS, jQuery, Node.js, React Native, WordPress
       </li>
       <li>
         <div class="styled-point">~$ </div>
-        FRAMEWORKS<br />
-        React Native, Node.js
+        DEVOPS<br />
+        Grafana, Prometheus, Azure portal, Docker
       </li>
       <li>
         <div class="styled-point">~$ </div>
-        TOOLS<br />
-        Git, Unix Shell, Azure, Prometheus, Grafana, Jira, Docker, WordPress, SPSS, LaTeX
+        MACHINE LEARNING<br />
+        scikit-learn, NumPy, Streamlit
+      <li>
+        <div class="styled-point">~$ </div>
+        OTHER TOOLS<br />
+        Git, Jira, SPSS, R, LaTeX, Microsoft Office suite
       </li>
     </ul>
     <h1>Experience</h1>
@@ -237,6 +208,7 @@
     <p>© Joanne Fan 2024</p>
   </footer>
 
+  <script src="workData.js"></script>
   <script>
     $(document).ready(function () {
       $("header").html(getNavHtml());
